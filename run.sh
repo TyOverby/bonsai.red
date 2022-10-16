@@ -9,7 +9,6 @@ if [ ! -d _opam ]; then
   eval $(opam env) 
   opam update
   opam install -y dune bonsai
-  eval $(opam env) 
 else 
   echo "skipping opam switch and install"
 fi
@@ -36,3 +35,6 @@ cp _build/default/bonsai_guide_code/main.bc.js ./publish/out/main.bc.js
 cp ./bonsai_guide_code/index.html ./publish/out/index.html
 cp ./bonsai_guide_code/style.css ./publish/out/style.css
 cp index.html ./publish/index.html
+
+ls publish
+ls publish/out
