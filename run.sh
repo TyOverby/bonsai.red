@@ -14,6 +14,8 @@ else
   echo "skipping opam switch and install"
 fi
 
+eval $(opam env) 
+
 if [ ! -d bonsai_guide_code ]; then 
   git clone https://github.com/janestreet/bonsai.git
   mv bonsai/examples/bonsai_guide_code ./
