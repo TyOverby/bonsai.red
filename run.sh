@@ -29,12 +29,9 @@ else
 fi
 
 mkdir -p publish/out
-dune build ./bonsai_guide_code/main.bc.js
+dune build --release ./bonsai_guide_code/main.bc.js
 
 cp _build/default/bonsai_guide_code/main.bc.js ./publish/out/main.bc.js
 cp ./bonsai_guide_code/index.html ./publish/out/index.html
 cp ./bonsai_guide_code/style.css ./publish/out/style.css
 cp index.html ./publish/index.html
-
-ls publish
-ls publish/out
