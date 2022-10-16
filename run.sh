@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+set -euo pipefail
+
 if [ ! -d _opam ]; then 
   opam switch create ./ ocaml-base-compiler.4.12.1
   eval $(opam env) 
@@ -7,6 +9,7 @@ if [ ! -d _opam ]; then
   eval $(opam env) 
   opam update
   opam install dune bonsai
+  eval $(opam env) 
 fi
 
 if [ ! -d bonsai_guide_code ]; then 
