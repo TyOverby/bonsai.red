@@ -8,7 +8,7 @@ if [ ! -d _opam ]; then
   opam repo add "janestreet-bleeding" "https://github.com/janestreet/opam-repository.git#e0f594b09711e5daf55ce097bb8d653e7ec87ea2"
   eval $(opam env) 
   opam update
-  opam install dune bonsai
+  opam install -y dune bonsai
   eval $(opam env) 
 fi
 
