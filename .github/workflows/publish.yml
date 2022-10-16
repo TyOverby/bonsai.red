@@ -2,15 +2,12 @@ name: Publish
 
 on:
   push:
+  schedule:
+    # Auto-Update on Fridays
+    - cron: 0 1 * * FRI
 
 jobs:
   build:
-    strategy:
-      fail-fast: false
-      matrix:
-        ocaml-compiler:
-          - 4.12.x
-
     runs-on: ubuntu-latest
 
     steps:
