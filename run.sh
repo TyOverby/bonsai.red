@@ -10,7 +10,7 @@ if [ ! -d _opam ]; then
 fi
 
 if [ ! -d bonsai_guide_code ]; then 
-  git clone git@github.com:janestreet/bonsai.git 
+  git clone https://github.com/janestreet/bonsai.git
   mv bonsai/examples/bonsai_guide_code ./
   mv bonsai/dune-project ./
 
