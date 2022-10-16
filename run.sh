@@ -10,7 +10,11 @@ if [ ! -d _opam ]; then
   opam update
   opam install -y dune bonsai
   eval $(opam env) 
+else 
+  echo "skipping opam switch and install"
 fi
+
+eval $(opam env) 
 
 if [ ! -d bonsai_guide_code ]; then 
   git clone https://github.com/janestreet/bonsai.git
@@ -21,11 +25,14 @@ if [ ! -d bonsai_guide_code ]; then
   sed -i -E 's/ppx_bonsai/bonsai.ppx_bonsai/g' ./bonsai_guide_code/dune 
 
   rm -rf bonsai
+else 
+  echo "skipping download of bonsai"
 fi
 
-
-mkdir -p out 
+mkdir -p publish/out
 dune build ./bonsai_guide_code/main.bc.js
-cp _build/default/bonsai_guide_code/main.bc.js ./out/main.bc.js
-cp ./bonsai_guide_code/index.html ./out/index.html
-cp ./bonsai_guide_code/style.css ./out/style.css
+
+cp _build/default/bonsai_guide_code/main.bc.js ./publish/out/main.bc.js
+cp ./bonsai_guide_code/index.html ./publish/out/index.html
+cp ./bonsai_guide_code/style.css ./publish/out/style.css
+cp index.html ./publish/index.html
