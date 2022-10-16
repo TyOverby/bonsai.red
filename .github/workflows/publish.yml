@@ -17,6 +17,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            _opam 
+            _build
+
       - name: Apt Install Opam
         run: sudo apt install opam && opam init
 
