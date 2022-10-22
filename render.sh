@@ -47,4 +47,4 @@ do
 done
 
 mv all.html ./publish/index.html
-mv style.css ./publish/style.css
+cp style.css ./publish/style.css
