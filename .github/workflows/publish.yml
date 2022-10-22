@@ -14,6 +14,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: download pandoc 
+        run: wget https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-linux-amd64.tar.gz 
+
+      - name: extract pandoc 
+        run: tar -xzf pandoc-2.19.2-linux-amd64.tar.gz 
+
+      - name: tree
+        run: tree
+
       - name: Cache
         uses: actions/cache@v2
         with:
@@ -21,6 +30,7 @@ jobs:
             _opam 
             _build
           key: 2
+
 
       - name: Install Dependencies 
         run: sudo apt install opam pandoc && opam init
