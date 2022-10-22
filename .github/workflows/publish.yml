@@ -22,8 +22,8 @@ jobs:
             _build
           key: 2
 
-      - name: Apt Install Opam
-        run: sudo apt install opam && opam init
+      - name: Install Dependencies 
+        run: sudo apt install opam pandoc && opam init
 
       - name: Generate Examples
         run: ./run.sh
