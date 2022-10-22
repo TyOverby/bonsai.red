@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap');
+
+/* CSS */
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+* {
+  text-decoration: none !important;  
+  box-sizing:border-box;
+}
+
+#bonsai {
+  color: #DA0031;
+}
+
+#slash {
+  color: #DA0031;
+  opacity: 0.4;
+}
+
+.toc_and_chapters {
+  float: left;
+
+  max-width: 150px;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  display:flex;
+  flex-direction: column-reverse;
+}
+
+.toc_and_chapters * {
+  margin-top: 0;
+}
+
+.toc_and_chapters li {
+  list-style:none;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+.toc_and_chapters ul {
+  padding:0;
+}
+
+.toc_and_chapters h3 {
+  margin:0;
+  font-weight:400;
+  margin-bottom:0.5em;
+}
+
+:root {
+  background: #1a1d23;
+  color: #ECEFF4;
+  font-weight:300;
+}
+
+h1, h2, h3, h4 {
+  font-weight:200;
+}
+
+body {
+  min-width: 720px;
+  max-width: 720px;
+  margin:auto;
+}
+
+ul, div.sourceCode, aside {
+  clear: both;
+}
+
+p, li {
+  line-height: 1.6em;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  background: #2E3440;
+  border: 1px solid #3B4252;
+  padding: 0 0.2em 0 0.2em;
+  border-radius: 3px;
+}
+
+pre.sourceCode {
+  background: #181a1f;
+  border: 1px solid #3B4252;
+  padding: 1em;
+  overflow:auto;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  border-radius: 3px 3px 0 0;
+}
+div.sourceCode {
+  margin:0 !important;
+}
+
+pre > code {
+  background: unset;
+  border: unset;
+  padding: unset;
+  border-radius:unset;
+}
+
+a {
+  color: #5E81AC;
+}
+
+iframe {
+  background: #fffef4;
+  background: #ECEFF4;
+  width: 100%;
+
+  border-radius: 0 0 3px 3px;
+  border: 1px solid #3b4252;
+  border-width: 0 1px 1px 1px;
+}
+
+.doc-title {
+  font-size: 3em;
+}
+
+aside {
+  margin-top:1em;
+  border: 1px solid #81A1C1;
+  padding: 0.5em;
+  background: #81a1c121;
+  border-radius: 3px;
+  position: relative;
+}
+
+aside::before {
+  content: 'ASIDE';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font-size: 0.3em;
+  font-weight: 600;
+  color: #81a1c1;
+}
