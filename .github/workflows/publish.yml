@@ -25,8 +25,11 @@ jobs:
       - name: Apt Install Opam
         run: sudo apt install opam && opam init
 
-      - name: Prepare
+      - name: Generate Examples
         run: ./run.sh
+
+      - name: Build HTML
+        run: ./render.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
