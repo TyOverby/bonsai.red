@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+PATH="$(pwd)/pandoc-2.19.2/bin:$PATH"
+
 mkdir -p publish/out
 mkdir -p temp
 

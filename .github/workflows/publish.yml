@@ -33,7 +33,7 @@ jobs:
 
 
       - name: Install Dependencies 
-        run: sudo apt install opam pandoc && opam init
+        run: sudo apt install opam && opam init
 
       - name: Generate Examples
         run: ./run.sh
