@@ -44,12 +44,4 @@ do
     echo "$f $b"
 done
 
-
-# pygments
-# tango
-# espresso
-# zenburn
-# kate
-# monochrome
-# breezedark
-# haddock
+mv all.html ./publish/index.html
