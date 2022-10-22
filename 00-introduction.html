@@ -1,0 +1,331 @@
+<!doctype html>
+<html >
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" /> -->
+
+        <!-- <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" /> -->
+
+        <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+
+        <!-- <script src="script.js"></script> -->
+
+        <!-- <script src="jquery.sticky-kit.js "></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/ryangrose/easy-pandoc-templates@948e28e5/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script> -->
+        <!-- <meta name="generator" content="pandoc" /> -->
+                        <title>  introduction</title>
+                        <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #eceff4;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #88c0d0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #a3be8c; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #bf616a; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #a3be8c; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #88c0d0; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #88c0d0; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #a3be8c; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #a3be8c; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #88c0d0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #bf616a; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #a3be8c; } /* SpecialChar */
+code span.ss { color: #a3be8c; } /* SpecialString */
+code span.st { color: #a3be8c; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #a3be8c; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+        </style>
+                                    </head>
+    <body>
+
+
+                <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span class="doc-title">
+                        <span id="bonsai">bonsai</span> 
+                        <span id="slash"> / </span> 
+                         introduction
+                    </span>
+                    <ul class="nav pull-right doc-info">
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="container">
+            <div class="row">
+                <div class="toc_and_chapters">
+                                        <div id="TOC" class="span3">
+                        <h3> This chapter</h3>
+                        <div class="well toc">
+
+                            <ul>
+                            <li><a href="#web-apps-at-10000-feet"
+                            id="toc-web-apps-at-10000-feet">Web Apps at
+                            10,000 Feet</a></li>
+                            <li><a href="#the-underlying-machinery"
+                            id="toc-the-underlying-machinery">The
+                            Underlying Machinery</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                                        <div id="chapters" class="span3">
+                        <h3> All chapters </h3>
+                        <ul>
+                        <li><a href="./00-introduction.html">  introduction </a></li>
+                        <li><a href="./01-virtual_dom.html">  virtual_dom </a></li>
+                        <li><a href="./02-dynamism.html">  dynamism </a></li>
+                        <li><a href="./03-state.html">  state </a></li>
+                        <li><a href="./04-forms.html">  forms </a></li>
+                        <li><a href="./05-effect.html">  effect </a></li>
+                        <li><a href="./07-flow.html">  flow </a></li>
+                        <li><a href="./08-css.html">  css </a></li>
+                        <li><a href="./09-edge-triggering.html">  edge triggering </a></li>
+                        </ul>                    </div>
+                </div>
+                <div class="span9">
+                                        <p>This guide will teach you how
+                                        to build user interfaces in the
+                                        browser using several of
+                                        libraries, primarily
+                                        <code>Bonsai</code> and
+                                        <code>Virtual_dom</code>.
+                                        Together, these libraries will
+                                        allow you to build applications
+                                        in a pure functional style
+                                        without needing to be exposed to
+                                        the impure, stateful API that
+                                        browsers provide.</p>
+                                        <p>In this guide we aim to
+                                        explain how to use Bonsai, and
+                                        to a certain degree, how Bonsai
+                                        works under the hood. We hope
+                                        that the latter will equip you
+                                        with the necessary knowledge to
+                                        tune the performance of your
+                                        applications.</p>
+                                        <h1
+                                        id="web-apps-at-10000-feet">Web
+                                        Apps at 10,000 Feet</h1>
+                                        <p>The browser understands three
+                                        languages: Javascript, HTML,
+                                        CSS. Jane Street programmers
+                                        only understand one language:
+                                        OCaml. Thus, we’ve made it
+                                        possible to write all three of
+                                        the browser languages using
+                                        OCaml.</p>
+                                        <ul>
+                                        <li><code>js_of_ocaml</code> is
+                                        an OCaml-to-Javascript
+                                        compiler.</li>
+                                        <li><code>virtual_dom</code> is
+                                        a library for building values
+                                        that represent a chunk of
+                                        HTML.</li>
+                                        <li><code>css_gen</code> is a
+                                        library for writing CSS-styles
+                                        in a type safe manner.</li>
+                                        </ul>
+                                        <p>The CSS situation is a little
+                                        more nuanced, since we actually
+                                        recommend writing CSS directly
+                                        using <code>ppx_css</code>.</p>
+                                        <p>A user interface is a
+                                        function from <em>data</em> to
+                                        <em>view</em>. In types:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb1"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">(* Virtual_dom.Vdom.Node.t represents your applications view *)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">open</span> Virtual_dom</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> ui : Your_input_type_here.t -&gt; Vdom.Node.t</span></code></pre></div>
+                                        <p>It’s easy to write composable
+                                        views with such functions, since
+                                        all you need to return is a
+                                        plain old OCaml value. A small
+                                        amount of boilerplate can turn
+                                        this function into a simple web
+                                        app that continuously displays
+                                        the result of the function.</p>
+                                        <p>Of course, this is a huge
+                                        simplification; in a real app,
+                                        you usually want:</p>
+                                        <ul>
+                                        <li><em>Interactivity</em>, so
+                                        the user can click on, type
+                                        into, and navigate through
+                                        things.</li>
+                                        <li><em>Incrementality</em>, so
+                                        that large amounts of highly
+                                        dynamically data can be
+                                        displayed without the interface
+                                        lagging.</li>
+                                        </ul>
+                                        <p>Bonsai provides these
+                                        features while still encouraging
+                                        the composition and abstraction
+                                        properties of regular OCaml
+                                        code. Bonsai wants you to forget
+                                        it is there. The signature of a
+                                        Bonsai app looks a bit like
+                                        this:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb2"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">open</span> Bonsai_web</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> ui : Your_input_type_here.t Value.t -&gt; Vdom.Node.t Computation.t</span></code></pre></div>
+                                        <p>It’s just like before, except
+                                        the input is wrapped with
+                                        <code>Value.t</code> and the
+                                        output is wrapped with
+                                        <code>Computation.t</code>.
+                                        While there is slightly more
+                                        friction, writing re-usable UI
+                                        components is just as easy. In
+                                        addition, we’ve expanded the
+                                        kinds of components you can
+                                        write, since
+                                        <code>Computation.t</code>
+                                        encapsulates incremental state
+                                        machines, which is how
+                                        interactivity is added to a
+                                        page.</p>
+                                        <p>Both these types are covered
+                                        in detail in chapters <a
+                                        href="./02-dynamism.html">2</a>
+                                        and <a
+                                        href="./03-state.html">3</a>.</p>
+                                        <h1
+                                        id="the-underlying-machinery">The
+                                        Underlying Machinery</h1>
+                                        <p>The incrementality in Bonsai
+                                        comes from the
+                                        <code>Incremental</code>
+                                        library. When a web page loads,
+                                        Bonsai compiles the top-level
+                                        <code>Vdom.Node.t Computation.t</code>
+                                        into something akin to
+                                        <code>Vdom.Node.t Incr.t</code>.
+                                        Then the <code>Incr_dom</code>
+                                        library handles running the main
+                                        loop to keep the incremental
+                                        graph stabilized
+                                        (i.e. up-to-date).</p>
+                                        <p>The <code>Vdom.Node.t</code>
+                                        representing the current view
+                                        gets put onto the screen via a
+                                        diff-and-patch process. The
+                                        <code>virtual_dom</code> library
+                                        always keeps track of the
+                                        previous
+                                        <code>Vdom.Node.t</code> that it
+                                        told the browser to display.
+                                        Whenever we request a
+                                        <em>new</em>
+                                        <code>Vdom.Node.t</code> to be
+                                        displayed on the screen, the
+                                        library first compares it to the
+                                        previous view to see what
+                                        changed, and then it applies
+                                        <em>just those changes</em> to
+                                        what the browser is
+                                        displaying.</p>
+                                        <p>Details regarding
+                                        Incremental, and the virtual-dom
+                                        diff-and-patch strategy are
+                                        abstracted away so you’ll rarely
+                                        need to think about them.
+                                        However, a good cost model will
+                                        help you to avoid or debug
+                                        performance pitfalls. Throughout
+                                        the rest of this guide, we will
+                                        endeavor to provide such a cost
+                                        model.</p>
+                                    </div>
+            </div>
+        </div>
+        <!-- <script src="https://vjs.zencdn.net/5.4.4/video.js"></script> -->
+
+    </body>
+</html>

@@ -1,0 +1,556 @@
+<!doctype html>
+<html >
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" /> -->
+
+        <!-- <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" /> -->
+
+        <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+
+        <!-- <script src="script.js"></script> -->
+
+        <!-- <script src="jquery.sticky-kit.js "></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/ryangrose/easy-pandoc-templates@948e28e5/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script> -->
+        <!-- <meta name="generator" content="pandoc" /> -->
+                        <title>  forms</title>
+                        <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #eceff4;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #88c0d0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #a3be8c; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #bf616a; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #a3be8c; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #88c0d0; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #88c0d0; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #a3be8c; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #a3be8c; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #88c0d0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #bf616a; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #a3be8c; } /* SpecialChar */
+code span.ss { color: #a3be8c; } /* SpecialString */
+code span.st { color: #a3be8c; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #a3be8c; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+        </style>
+                                    </head>
+    <body>
+
+
+                <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span class="doc-title">
+                        <span id="bonsai">bonsai</span> 
+                        <span id="slash"> / </span> 
+                         forms
+                    </span>
+                    <ul class="nav pull-right doc-info">
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="container">
+            <div class="row">
+                <div class="toc_and_chapters">
+                                        <div id="TOC" class="span3">
+                        <h3> This chapter</h3>
+                        <div class="well toc">
+
+                            <ul>
+                            <li><a href="#form.t"
+                            id="toc-form.t">Form.t</a>
+                            <ul>
+                            <li><a href="#form.value"
+                            id="toc-form.value">Form.value</a></li>
+                            <li><a href="#form.view_as_vdom"
+                            id="toc-form.view_as_vdom">Form.view_as_vdom</a></li>
+                            <li><a href="#form.set"
+                            id="toc-form.set">Form.set</a></li>
+                            </ul></li>
+                            <li><a href="#combinators"
+                            id="toc-combinators">Combinators</a></li>
+                            <li><a href="#validation-parsing"
+                            id="toc-validation-parsing"><s>Validation</s>
+                            Parsing</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                                        <div id="chapters" class="span3">
+                        <h3> All chapters </h3>
+                        <ul>
+                        <li><a href="./00-introduction.html">  introduction </a></li>
+                        <li><a href="./01-virtual_dom.html">  virtual_dom </a></li>
+                        <li><a href="./02-dynamism.html">  dynamism </a></li>
+                        <li><a href="./03-state.html">  state </a></li>
+                        <li><a href="./04-forms.html">  forms </a></li>
+                        <li><a href="./05-effect.html">  effect </a></li>
+                        <li><a href="./07-flow.html">  flow </a></li>
+                        <li><a href="./08-css.html">  css </a></li>
+                        <li><a href="./09-edge-triggering.html">  edge triggering </a></li>
+                        </ul>                    </div>
+                </div>
+                <div class="span9">
+                                        <p>Back in the <a
+                                        href="./03-state.html">state
+                                        chapter</a>, a textbox component
+                                        was built out of the low-level
+                                        Bonsai primitives. Textboxes are
+                                        an example of form elements, and
+                                        they’re very common in
+                                        real-world applications. Because
+                                        of this, Bonsai has an entire
+                                        library dedicated to building
+                                        and combining forms.</p>
+                                        <p>The library is called
+                                        <code>bonsai_web_ui_form</code>,
+                                        and it is built on top of the
+                                        same primitives that were used
+                                        in the previous chapter.</p>
+                                        <p>For the rest of this doc,
+                                        this module alias will be in
+                                        effect:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb1"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> Form = Bonsai_web_ui_form</span></code></pre></div>
+                                        <h1 id="form.t">Form.t</h1>
+                                        <p>The primary type in the forms
+                                        library is
+                                        <code>'a Form.t</code>. A value
+                                        of type <code>'a Form.t</code>
+                                        represents the state of a form
+                                        at one particular instant in
+                                        time, where the form in question
+                                        can edit values of type
+                                        <code>'a</code>.</p>
+                                        <p>Because of the inherently
+                                        stateful nature of form UIs, it
+                                        is common to find
+                                        <code>'a Form.t</code> inside of
+                                        <code>Computation.t</code>. For
+                                        example, a textbox form element
+                                        that produces strings has this
+                                        type:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb2"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> Form.Elements.Textbox.<span class="dt">string</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  :  Source_code_position.t</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  -&gt; <span class="dt">string</span> Form.t Computation.t</span></code></pre></div>
+                                        <p>And the type for a checkbox
+                                        that produces bools has this
+                                        type:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb3"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> Form.Elements.Checkbox.<span class="dt">bool</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  :  Source_code_position.t</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  -&gt; default:<span class="dt">bool</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  -&gt; <span class="dt">bool</span> Form.t Computation.t</span></code></pre></div>
+                                        <p>There are three primary
+                                        operations that can be performed
+                                        on a <code>'a Form.t</code></p>
+                                        <ol type="1">
+                                        <li>Extract the current value:
+                                        <code>val Form.value: 'a Form.t -&gt; 'a Or_error.t</code></li>
+                                        <li>Compute the view:
+                                        <code>val Form.view_as_vdom: 'a Form.t -&gt; Vdom.Node.t</code></li>
+                                        <li>Set the value of the form:
+                                        <code>val Form.set: 'a Form.t -&gt; 'a -&gt; unit Vdom.Effect.t</code></li>
+                                        </ol>
+                                        <aside>
+                                        <p>The <code>view_as_vdom</code>
+                                        function actually has an
+                                        optional parameter, which we’ll
+                                        investigate soon.</p>
+                                        </aside>
+                                        <p>Let’s look at them all in
+                                        action, using the textbox
+                                        component up above as an
+                                        example:</p>
+                                        <h2
+                                        id="form.value">Form.value</h2>
+                                        <p>The “value” of a
+                                        <code>'a Form.t</code> is the
+                                        current output of the form as
+                                        filled in by the user. For a
+                                        simple textbox, that value would
+                                        be <code>string</code>, but most
+                                        forms are compositions of
+                                        subforms, so the produced value
+                                        can be a record or variant.</p>
+                                        <p>In the following example, the
+                                        value of a textbox is extracted
+                                        and printed as a sexp:
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/form_examples.ml,part=form_textbox_value --></p>
+                                        <div class="sourceCode"
+                                        id="cb4"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> textbox_value =</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub textbox = Form.Elements.Textbox.<span class="dt">string</span> () <span class="kw">in</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr textbox = textbox &gt;&gt;| Form.label <span class="st">&quot;my textbox&quot;</span> <span class="kw">in</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> value = Form.value textbox <span class="kw">in</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    [ Form.view_as_vdom textbox</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    ; Vdom.Node.sexp_for_debugging ([%sexp_of: <span class="dt">string</span> Or_error.t] value)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#form_textbox_value">
+                                        </iframe>
+                                        <p>Forms returning their values
+                                        inside of an
+                                        <code>Or_error.t</code> may be
+                                        surprising at first, but in
+                                        practice, more complex forms are
+                                        fallible, either because form
+                                        validation for an element has
+                                        failed, or because a large form
+                                        is only partially filled out. By
+                                        making the assumption that
+                                        <em>all</em> forms are fallible,
+                                        the rest of the API is
+                                        simpler.</p>
+                                        <h2
+                                        id="form.view_as_vdom">Form.view_as_vdom</h2>
+                                        <p>This one is pretty simple,
+                                        <code>view_as_vdom</code>
+                                        renders the form into a
+                                        <code>Vdom.Node.t</code>.
+                                        However, it also has an optional
+                                        parameter that makes submitting
+                                        the form easier. Its full type
+                                        signature is:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb5"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> Submit : <span class="kw">sig</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">type</span> &#39;a t</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">val</span> create</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    :  ?handle_enter:<span class="dt">bool</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    -&gt; ?button:<span class="dt">string</span> <span class="dt">option</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    -&gt; f:(&#39;a -&gt; <span class="dt">unit</span> Ui_effect.t)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    -&gt; <span class="dt">unit</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    -&gt; &#39;a t</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> view_as_vdom : ?on_submit:&#39;a Submit.t -&gt; &#39;a t -&gt; Vdom.Node.t</span></code></pre></div>
+                                        <p>Because forms are frequently
+                                        paired with a “submit” button,
+                                        the optional submission options
+                                        provide an easy way to submit
+                                        the form, with the
+                                        <code>f</code> field being
+                                        called with the value of the
+                                        fully-validated form. The two
+                                        options for submitting the form
+                                        are</p>
+                                        <ol type="1">
+                                        <li><code>handle_enter</code>,
+                                        when <code>true</code> will
+                                        cause the form to be submitted
+                                        whenever the
+                                        <code>&lt;enter&gt;</code> key
+                                        hit when focusing a form element
+                                        inside this form.</li>
+                                        <li><code>button</code>, if
+                                        <code>Some</code>, a button with
+                                        the provided text will be added
+                                        to the form. This button will be
+                                        disabled whenever the form is in
+                                        an error state, but when the
+                                        form is valid, the button will
+                                        be enabled and will trigger the
+                                        submission function when
+                                        pressed.</li>
+                                        </ol>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/form_examples.ml,part=view_with_submission -->
+                                        <div class="sourceCode"
+                                        id="cb6"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> textbox_on_submit =</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub textbox = Form.Elements.Textbox.<span class="dt">string</span> () <span class="kw">in</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr textbox = textbox <span class="kw">in</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  textbox</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  |&gt; Form.label <span class="st">&quot;text to alert&quot;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  |&gt; Form.view_as_vdom ~on_submit:(Form.Submit.create () ~f:alert)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#form_textbox_on_submit">
+                                        </iframe>
+                                        <h2 id="form.set">Form.set</h2>
+                                        <p>Setting the contents of a
+                                        form is a rarer requirement.
+                                        Most forms are read-only (the
+                                        user is the only one filling it
+                                        out), but sometimes, a form
+                                        should be modified by the
+                                        program, perhaps to initialize
+                                        the form in a specific
+                                        state.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/form_examples.ml,part=form_set -->
+                                        <div class="sourceCode"
+                                        id="cb7"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> form_set =</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub textbox = Form.Elements.Textbox.<span class="dt">string</span> () <span class="kw">in</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr textbox = textbox &gt;&gt;| Form.label <span class="st">&quot;my textbox&quot;</span> <span class="kw">in</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    [ Form.view_as_vdom textbox</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    ; Vdom.Node.button</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; Form.set textbox <span class="st">&quot;hello world&quot;</span>))</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        [ Vdom.Node.text <span class="st">&quot;click me&quot;</span> ]</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#form_set">
+                                        </iframe>
+                                        <h1
+                                        id="combinators">Combinators</h1>
+                                        <p>Most forms contain many input
+                                        elements, and Bonsai-Forms comes
+                                        with a set of combinators for
+                                        combining many smaller subforms
+                                        into a larger form.</p>
+                                        <p>For this example, we’ll build
+                                        a form for the following
+                                        type:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/form_examples.ml,part=record_form_type -->
+                                        <div class="sourceCode"
+                                        id="cb8"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> t =</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  { some_string : <span class="dt">string</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  ; an_int : <span class="dt">int</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  ; on_or_off : <span class="dt">bool</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>[@@deriving typed_fields, sexp_of]</span></code></pre></div>
+                                        <p>Building a form that produces
+                                        values of this type requires the
+                                        use of the
+                                        <code>typed_fields</code> ppx,
+                                        which you’ll need to add to your
+                                        jbuild. Deriving
+                                        <code>typed_fields</code> will
+                                        make a module named
+                                        <code>Typed_field</code>
+                                        containing a type with a
+                                        constructor representing each
+                                        field in the record it was
+                                        derived on.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/form_examples.ml,part=record_form -->
+                                        <div class="sourceCode"
+                                        id="cb9"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> form_of_t : t Form.t Computation.t =</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  Form.Typed.Record.make</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">module</span> <span class="kw">struct</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>      <span class="co">(* reimport the module that typed_fields just derived *)</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">module</span> Typed_field = Typed_field</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> label_for_field = `Inferred</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>      <span class="co">(* provide a form computation for each field in the record *)</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> form_for_field : <span class="kw">type</span> a. a Typed_field.t -&gt; a Form.t Computation.t = <span class="kw">function</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        | Some_string -&gt; Form.Elements.Textbox.<span class="dt">string</span> ()</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        | An_int -&gt; Form.Elements.Number.<span class="dt">int</span> ~default:<span class="dv">0</span> ~step:<span class="dv">1</span> ()</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        | On_or_off -&gt; Form.Elements.Checkbox.<span class="dt">bool</span> ~default:<span class="kw">false</span> ()</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>      ;;</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>We can also do the same for
+                                        variants with
+                                        <code>[@@deriving typed_variants]</code>.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/form_examples.ml,part=variant_form -->
+                                        <div class="sourceCode"
+                                        id="cb10"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> v =</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  | A</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  | B <span class="kw">of</span> <span class="dt">int</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  | C <span class="kw">of</span> <span class="dt">string</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>[@@deriving typed_variants, sexp_of]</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> form_of_v : v Form.t Computation.t =</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  Form.Typed.Variant.make</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">module</span> <span class="kw">struct</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      <span class="co">(* reimport the module that typed_fields just derived *)</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>      <span class="kw">module</span> Typed_variant = Typed_variant_of_v</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> label_for_variant = `Inferred</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>      <span class="co">(* provide a form computation for constructor in the variant *)</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> form_for_variant : <span class="kw">type</span> a. a Typed_variant.t -&gt; a Form.t Computation.t</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        = <span class="kw">function</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>          | A -&gt; Bonsai.const (Form.return ())</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>          | B -&gt; Form.Elements.Textbox.<span class="dt">int</span> ()</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>          | C -&gt; Form.Elements.Textbox.<span class="dt">string</span> ()</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>      ;;</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span>)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>Finally, using this new form
+                                        and printing the results:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/form_examples.ml,part=record_form_view -->
+                                        <div class="sourceCode"
+                                        id="cb11"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> view_for_form : Vdom.Node.t Computation.t =</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub form_t = form_of_t <span class="kw">in</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub form_v = form_of_v <span class="kw">in</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr form_t = form_t</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> form_v = form_v <span class="kw">in</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> form = Form.both form_t form_v <span class="kw">in</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> value = Form.value form <span class="kw">in</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    [ Form.view_as_vdom form</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    ; Vdom.Node.sexp_for_debugging ([%sexp_of: (t * v) Or_error.t] value)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#record_form_view">
+                                        </iframe>
+                                        <h1
+                                        id="validation-parsing"><s>Validation</s>
+                                        Parsing</h1>
+                                        <p>Notably missing in the Forms
+                                        API is a “map” function. In its
+                                        place is
+                                        <code>Form.project</code>, which
+                                        has this type signature:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb12"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> project</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  :  &#39;a t</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  -&gt; parse_exn:(&#39;a -&gt; &#39;b)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  -&gt; unparse:(&#39;b -&gt; &#39;a)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  -&gt; &#39;b t</span></code></pre></div>
+                                        <p><code>project</code> is a way
+                                        to move from a form producing
+                                        values of type <code>'a</code>
+                                        to a form producing values of
+                                        type <code>'b</code>, but it
+                                        requires two “mapping”
+                                        functions,
+                                        <code>parse_exn</code>, which
+                                        moves from <code>'a</code> to
+                                        <code>'b</code> as you’d expect,
+                                        but the other,
+                                        <code>unparse</code>, goes in
+                                        the opposite direction!</p>
+                                        <p><code>unparse</code> is
+                                        required because
+                                        <code>Form.set</code> needs to
+                                        be able to accept values of type
+                                        <code>'b</code> and route them
+                                        through the setter for the input
+                                        form.</p>
+                                        <p>In practice,
+                                        <code>project</code> is used to
+                                        build forms for types that can
+                                        be parsed from other types. For
+                                        example, if
+                                        <code>Form.Elements.Textbox.int</code>
+                                        didn’t exist, we could implement
+                                        it like so:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/form_examples.ml,part=int_textbox -->
+                                        <div class="sourceCode"
+                                        id="cb13"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> int_textbox : <span class="dt">int</span> Form.t Computation.t =</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub form = Form.Elements.Textbox.<span class="dt">string</span> () <span class="kw">in</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr form = form <span class="kw">in</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  Form.project form ~parse_exn:Int.of_string ~unparse:Int.to_string</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#int_textbox">
+                                        </iframe>
+                                        <p>You’ll notice that
+                                        non-integers are reported as an
+                                        error. <code>Form.project</code>
+                                        actually captures the exception
+                                        thrown by
+                                        <code>Int.of_string</code> and
+                                        the <code>Form.value</code>
+                                        returned by the
+                                        <code>project</code>ed form is
+                                        an <code>Error</code>.</p>
+                                        <p>On to <a
+                                        href="./05-effect.html">Chapter
+                                        5: Effect</a></p>
+                                    </div>
+            </div>
+        </div>
+        <!-- <script src="https://vjs.zencdn.net/5.4.4/video.js"></script> -->
+
+    </body>
+</html>

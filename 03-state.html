@@ -1,0 +1,773 @@
+<!doctype html>
+<html >
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" /> -->
+
+        <!-- <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" /> -->
+
+        <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+
+        <!-- <script src="script.js"></script> -->
+
+        <!-- <script src="jquery.sticky-kit.js "></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/ryangrose/easy-pandoc-templates@948e28e5/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script> -->
+        <!-- <meta name="generator" content="pandoc" /> -->
+                        <title>  state</title>
+                        <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #eceff4;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #88c0d0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #a3be8c; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #bf616a; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #a3be8c; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #88c0d0; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #88c0d0; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #a3be8c; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #a3be8c; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #88c0d0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #bf616a; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #a3be8c; } /* SpecialChar */
+code span.ss { color: #a3be8c; } /* SpecialString */
+code span.st { color: #a3be8c; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #a3be8c; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+        </style>
+                                    </head>
+    <body>
+
+
+                <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span class="doc-title">
+                        <span id="bonsai">bonsai</span> 
+                        <span id="slash"> / </span> 
+                         state
+                    </span>
+                    <ul class="nav pull-right doc-info">
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="container">
+            <div class="row">
+                <div class="toc_and_chapters">
+                                        <div id="TOC" class="span3">
+                        <h3> This chapter</h3>
+                        <div class="well toc">
+
+                            <ul>
+                            <li><a href="#simple-state"
+                            id="toc-simple-state">Simple State</a></li>
+                            <li><a href="#multiple-textboxes"
+                            id="toc-multiple-textboxes">Multiple
+                            Textboxes</a></li>
+                            <li><a href="#state-machine"
+                            id="toc-state-machine">State
+                            Machine</a></li>
+                            <li><a
+                            href="#why-should-functional-programmers-be-okay-with-stateful-components"
+                            id="toc-why-should-functional-programmers-be-okay-with-stateful-components">Why
+                            should functional programmers be okay with
+                            stateful components?</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                                        <div id="chapters" class="span3">
+                        <h3> All chapters </h3>
+                        <ul>
+                        <li><a href="./00-introduction.html">  introduction </a></li>
+                        <li><a href="./01-virtual_dom.html">  virtual_dom </a></li>
+                        <li><a href="./02-dynamism.html">  dynamism </a></li>
+                        <li><a href="./03-state.html">  state </a></li>
+                        <li><a href="./04-forms.html">  forms </a></li>
+                        <li><a href="./05-effect.html">  effect </a></li>
+                        <li><a href="./07-flow.html">  flow </a></li>
+                        <li><a href="./08-css.html">  css </a></li>
+                        <li><a href="./09-edge-triggering.html">  edge triggering </a></li>
+                        </ul>                    </div>
+                </div>
+                <div class="span9">
+                                        <p><a
+                                        href="./02-dynamism.html">Chapter
+                                        2</a> briefly touched on the
+                                        fact that computations capture
+                                        internal state. This chapter
+                                        takes a deeper look at the
+                                        primitives Bonsai provides for
+                                        introducing and interacting with
+                                        local state.</p>
+                                        <h1 id="simple-state">Simple
+                                        State</h1>
+                                        <p>The simplest kind of state is
+                                        <code>Bonsai.state</code>. It
+                                        returns both a value tracking
+                                        the state’s current model, and
+                                        also a function for updating
+                                        that model.</p>
+                                        <p><code>val state   :  (module Model with type t = 'model)   -&gt; default_model:'model   -&gt; ('model * ('model -&gt; unit Effect.t)) Computation.t</code></p>
+                                        <p>This function has a few types
+                                        that might be a bit confusing to
+                                        a new user of OCaml, so let’s
+                                        step through them one by
+                                        one.</p>
+                                        <ol type="1">
+                                        <li><code>(module Model with type t = 'model)</code>:
+                                        This is a first-class module
+                                        that describes the type of the
+                                        state. The type needs to be
+                                        <code>sexp</code>able and
+                                        <code>equal</code>able.
+                                        Typically this argument is
+                                        provided by wrapping an already
+                                        existing module inside the
+                                        first-class-module-packing
+                                        syntax; for example, you might
+                                        write
+                                        <code>(module String)</code>.</li>
+                                        <li><code>default_model:'model</code>:
+                                        This is the initial value
+                                        contained in the state.</li>
+                                        </ol>
+                                        <p>Let’s break down a simple,
+                                        yet realistic usage of this
+                                        computation.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/state_examples.ml,part=textbox -->
+                                        <div class="sourceCode"
+                                        id="cb1"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> textbox : (<span class="dt">string</span> * Vdom.Node.t) Computation.t =</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub state, set_state = Bonsai.state (<span class="kw">module</span> <span class="dt">String</span>) ~default_model:<span class="st">&quot;&quot;</span> <span class="kw">in</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr state = state</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> set_state = set_state <span class="kw">in</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> view =</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.<span class="dt">input</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      ~attr:Vdom.Attr.(value_prop state @ on_input (<span class="kw">fun</span> _ new_text -&gt; set_state new_text))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      ()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  state, view</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#textbox">
+                                        </iframe>
+                                        <p>The computation returns the
+                                        current contents of a textbox,
+                                        as well as the textbox view
+                                        itself. The view could be
+                                        combined with the views from
+                                        other components, eventually
+                                        becoming the view for the entire
+                                        application. The “current value”
+                                        could be passed on to other
+                                        components (like we’ll do
+                                        later).</p>
+                                        <aside>
+                                        <p>In the Bonsai ecosystem, a
+                                        function that takes any number
+                                        of <code>Value.t</code> as input
+                                        and returns a
+                                        <code>Computation.t</code> is
+                                        considered a “component”. (In
+                                        this example, “textbox” takes no
+                                        <code>Value.t</code> as inputs,
+                                        but zero is still “any number”,
+                                        so <code>textbox</code> is a
+                                        component.)</p>
+                                        </aside>
+                                        <p><code>let%sub state, set_state = Bonsai.state (module String) ~default_model:"" in</code></p>
+                                        <p>This line creates some string
+                                        state initially containing the
+                                        empty string. We use
+                                        <code>let%sub</code> to
+                                        instantiate this state, giving
+                                        us access to <code>state</code>
+                                        and <code>set_state</code>,
+                                        which have types
+                                        <code>string Value.t</code> and
+                                        <code>(string -&gt; unit Effect.t) Value.t</code>,
+                                        respectively.</p>
+                                        <p>The <code>let%arr</code>
+                                        expression maps over two values
+                                        to produce a computation
+                                        containing the string and the
+                                        view. If we attempted to write
+                                        this code using
+                                        <code>state</code> and
+                                        <code>set_state</code> directly
+                                        instead of through
+                                        <code>let%arr</code>, the
+                                        resulting program would not
+                                        type-check, since both of these
+                                        variables have
+                                        <code>Value.t</code> types.
+                                        <code>let%arr</code> is required
+                                        in order to get access to the
+                                        data inside the values.</p>
+                                        <p>The actual construction of
+                                        the textbox virtual-dom node is
+                                        quite boring; we add the
+                                        <code>value_prop</code> property
+                                        to keep the textbox contents in
+                                        sync, and also register an event
+                                        handler for
+                                        <code>on_input</code>, an event
+                                        that fires when the text in the
+                                        textbox changes.</p>
+                                        <aside>
+                                        <p>It is not obvious why
+                                        <code>value_prop</code> is
+                                        needed. If the contents of the
+                                        textbox are populated by the
+                                        user, why re-set them with the
+                                        current state’s value?</p>
+                                        <p>The answer is complicated,
+                                        but it boils down to the
+                                        behavior of the component in
+                                        weirder circumstances than these
+                                        basic examples, like</p>
+                                        <ol type="1">
+                                        <li>The <code>set_state</code>
+                                        function is called by something
+                                        <em>other</em> than the textbox
+                                        <code>on_input</code> function.
+                                        In this scenario, you’d want the
+                                        contents of the textbox to
+                                        change alongside the
+                                        <code>state</code>.</li>
+                                        <li>The textbox component is
+                                        removed from the page and then
+                                        added back again. If
+                                        <code>value_prop</code> wasn’t
+                                        there, the textbox’s default
+                                        state would be empty!</li>
+                                        </ol>
+                                        </aside>
+                                        <p>When the event does fire, the
+                                        <code>set_state</code> function
+                                        is called with the new string.
+                                        <code>set_state</code> has type
+                                        <code>string -&gt; unit Effect.t</code>,
+                                        which you may recognize from the
+                                        last section in the <a
+                                        href="./01-virtual_dom.html">virtual-dom</a>
+                                        chapter. This function is called
+                                        with the new textbox contents,
+                                        and the event which is returned
+                                        schedules the state-setting in
+                                        the Bonsai event queue.</p>
+                                        <p>This is the payoff for the
+                                        unanswered questions in <a
+                                        href="./01-virtual_dom.html">the
+                                        virtual-dom Chapter</a>:</p>
+                                        <ol type="1">
+                                        <li><em>How do I get values of
+                                        type <code>unit Effect.t</code>
+                                        that aren’t just
+                                        <code>Ignore</code> and
+                                        <code>Many</code></em>:
+                                        State-transition functions
+                                        returned by stateful Bonsai
+                                        components will return
+                                        <code>unit Effect.t</code>s.</li>
+                                        <li><em>Why would I want to use
+                                        the Bonsai event queue
+                                        anyway</em>: More complex
+                                        stateful components (like
+                                        <code>Bonsai.state_machine</code>)
+                                        can witness the changes made to
+                                        other stateful components, and
+                                        the Bonsai event-queue
+                                        guarantees that these updates
+                                        occur in a consistent order and
+                                        that downstream components
+                                        witness changes made to upstream
+                                        components.</li>
+                                        </ol>
+                                        <h1
+                                        id="multiple-textboxes">Multiple
+                                        Textboxes</h1>
+                                        <p>Now that we’ve built a single
+                                        textbox component, let’s use it
+                                        in a bigger component:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/state_examples.ml,part=two_textboxes -->
+                                        <div class="sourceCode"
+                                        id="cb2"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> two_textboxes : Vdom.Node.t Computation.t =</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub textbox_a = textbox <span class="kw">in</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub textbox_b = textbox <span class="kw">in</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr contents_a, view_a = textbox_a</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> contents_b, view_b = textbox_b <span class="kw">in</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> display = Vdom.Node.textf <span class="st">&quot;a: %s, b: %s&quot;</span> contents_a contents_b <span class="kw">in</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    ~attr:(Vdom.Attr.style (Css_gen.display `Inline_grid))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    [ view_a; view_b; display ]</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#two_textboxes">
+                                        </iframe>
+                                        <p>This code is structurally
+                                        very similar to the textbox
+                                        component from earlier:</p>
+                                        <ol type="1">
+                                        <li>It instantiates computations
+                                        using <code>let%sub</code> (this
+                                        time with the
+                                        <code>textbox</code> component
+                                        itself, rather than the
+                                        primitive
+                                        <code>Bonsai.state</code>
+                                        computation).</li>
+                                        <li><code>let%arr</code> is used
+                                        to build a computation by
+                                        mapping over values previously
+                                        bound by
+                                        <code>let%sub</code>.</li>
+                                        </ol>
+                                        <p>Of particular note is that
+                                        the <code>textbox</code>
+                                        component is instantiated twice
+                                        (using <code>let%sub</code>).
+                                        Because of this, each textbox
+                                        will have its own independent
+                                        state.</p>
+                                        <p>Just for kicks, it’s easy to
+                                        see what would happen if the
+                                        computation is evaluated once
+                                        but used twice. In the following
+                                        code, the only difference
+                                        between it and the previous
+                                        example is this line:</p>
+                                        <div class="sourceCode"
+                                        id="cb3"><pre
+                                        class="sourceCode diff"><code class="sourceCode diff"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="st">- let%sub textbox_b = textbox in</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ let textbox_b = textbox_a in</span></span></code></pre></div>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/state_examples.ml,part=two_textboxes_shared_state -->
+                                        <div class="sourceCode"
+                                        id="cb4"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> two_textboxes_shared_state : Vdom.Node.t Computation.t =</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub textbox_a = textbox <span class="kw">in</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> textbox_b = textbox_a <span class="kw">in</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr contents_a, view_a = textbox_a</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> contents_b, view_b = textbox_b <span class="kw">in</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> display = Vdom.Node.textf <span class="st">&quot;a: %s, b: %s&quot;</span> contents_a contents_b <span class="kw">in</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    ~attr:(Vdom.Attr.style (Css_gen.display `Inline_grid))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    [ view_a; view_b; display ]</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#two_textboxes_shared_state">
+                                        </iframe>
+                                        <p>Not very useful, but
+                                        heartwarming that something
+                                        sensible happens at all.</p>
+                                        <h1 id="state-machine">State
+                                        Machine</h1>
+                                        <p>While
+                                        <code>Bonsai.state</code> is
+                                        quite useful, sometimes the
+                                        state contained within an
+                                        application more closely
+                                        resembles a state-machine with
+                                        well-defined transitions between
+                                        states.</p>
+                                        <p>Consider a “counter”
+                                        component that stores (and
+                                        displays) an integer, alongside
+                                        buttons which increment and
+                                        decrement that integer. This
+                                        component can easily be
+                                        implemented using
+                                        <code>Bonsai.state</code>:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/state_examples.ml,part=counter_state -->
+                                        <div class="sourceCode"
+                                        id="cb5"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> state_based_counter : Vdom.Node.t Computation.t =</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub state, set_state = Bonsai.state (<span class="kw">module</span> Int) ~default_model:<span class="dv">0</span> <span class="kw">in</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr state = state</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> set_state = set_state <span class="kw">in</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> decrement =</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.button</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; set_state (state - <span class="dv">1</span>)))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      [ Vdom.Node.text <span class="st">&quot;-1&quot;</span> ]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> increment =</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.button</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>      ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; set_state (state + <span class="dv">1</span>)))</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>      [ Vdom.Node.text <span class="st">&quot;+1&quot;</span> ]</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div [ decrement; Vdom.Node.textf <span class="st">&quot;%d&quot;</span> state; increment ]</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#state_based_counter">
+                                        </iframe>
+                                        <p>But there’s a tricky bug
+                                        hidden in this implementation:
+                                        if a user clicks the button more
+                                        than once within a span of
+                                        16-milliseconds, there’s a
+                                        chance that both button clicks
+                                        will set the same value! This is
+                                        because the “current state”
+                                        value is closed over by the
+                                        event handler, and this value
+                                        could be stale because the DOM
+                                        (including event handlers) is
+                                        only updated once per frame
+                                        (approx every 16ms).</p>
+                                        <aside>
+                                        <p>It’s easy to say “clicking on
+                                        a button that fast isn’t
+                                        particularly likely”, and that
+                                        may be true, but users are
+                                        <em>very fast</em> with their
+                                        keyboards, and using keyboard
+                                        shortcuts to manipulate
+                                        applications is common. In
+                                        addition, if the application has
+                                        an exceptionally long frame,
+                                        then the user might accidentally
+                                        click twice before the frame
+                                        completes.</p>
+                                        </aside>
+                                        <p>Fortunately,
+                                        <code>Bonsai.state_machine0</code>
+                                        is here to help! It has this
+                                        type:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb6"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> Bonsai.state_machine0</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  :  (<span class="kw">module</span> Model <span class="kw">with</span> <span class="kw">type</span> t = &#39;model)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  -&gt; (<span class="kw">module</span> Action <span class="kw">with</span> <span class="kw">type</span> t = &#39;action)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  -&gt; default_model:&#39;model</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  -&gt; apply_action:</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>       (inject:(&#39;action -&gt; <span class="dt">unit</span> Effect.t)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        -&gt; schedule_event:(<span class="dt">unit</span> Effect.t -&gt; <span class="dt">unit</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        -&gt; &#39;model</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        -&gt; &#39;action</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        -&gt; &#39;model)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  -&gt; (&#39;model * (&#39;action -&gt; <span class="dt">unit</span> Effect.t)) Computation.t</span></code></pre></div>
+                                        <p>Compared to
+                                        <code>Bonsai.state</code>, there
+                                        are several similarities:</p>
+                                        <ol type="1">
+                                        <li>A “Model” first-class-module
+                                        is passed in, alongside the
+                                        initial model value
+                                        (<code>default_model</code>).</li>
+                                        <li>The return value is a
+                                        <code>Computation.t</code> that
+                                        provides the current state
+                                        alongside a function which
+                                        schedules changes to the
+                                        state.</li>
+                                        </ol>
+                                        <p>The main difference is the
+                                        additional <code>Action</code>
+                                        module, and
+                                        <code>apply_action</code>. The
+                                        apply-action parameter is a
+                                        function with a fairly long
+                                        signature, but can be simplified
+                                        down to the last section:
+                                        <code>'model -&gt; 'action -&gt; 'model</code>.
+                                        This encodes the notion of a
+                                        state-machine transition: “given
+                                        the current model and an action,
+                                        produce a new model.”</p>
+                                        <aside>
+                                        <p>The <code>inject</code> and
+                                        <code>schedule_event</code>
+                                        parameters are rarely used. They
+                                        are only useful when a
+                                        state-transition needs to
+                                        schedule <em>another</em> state
+                                        transition, either for itself
+                                        (by composing
+                                        <code>inject</code> with
+                                        <code>schedule_event</code>) or
+                                        for another state-machine (just
+                                        calling
+                                        <code>schedule_event</code>).</p>
+                                        </aside>
+                                        <p>So how would we use
+                                        <code>state_machine0</code> to
+                                        fix the bug in the counter
+                                        application?</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/state_examples.ml,part=counter_state_machine -->
+                                        <div class="sourceCode"
+                                        id="cb7"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> Action = <span class="kw">struct</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">type</span> t =</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    | Increment</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    | Decrement</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  [@@deriving sexp_of]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> counter_state_machine : Vdom.Node.t Computation.t =</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub state, inject =</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    Bonsai.state_machine0</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      (<span class="kw">module</span> Int)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      (<span class="kw">module</span> Action)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      ~default_model:<span class="dv">0</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>      ~apply_action:(<span class="kw">fun</span> ~inject:_ ~schedule_event:_ model action -&gt;</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">match</span> action <span class="kw">with</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        | Increment -&gt; model + <span class="dv">1</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        | Decrement -&gt; model - <span class="dv">1</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr state = state</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> inject = inject <span class="kw">in</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> decrement =</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.button</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>      ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; inject Decrement))</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>      [ Vdom.Node.text <span class="st">&quot;-1&quot;</span> ]</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> increment =</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.button</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>      ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; inject Increment))</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>      [ Vdom.Node.text <span class="st">&quot;+1&quot;</span> ]</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div [ decrement; Vdom.Node.textf <span class="st">&quot;%d&quot;</span> state; increment ]</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>First, an <code>Action</code>
+                                        module is defined as a sum type
+                                        that lists all the operations
+                                        that can be performed on the
+                                        state-machine. This module is
+                                        passed in to the call to
+                                        <code>state_machine0</code>.
+                                        Then, the
+                                        <code>apply_action</code>
+                                        function is defined as a
+                                        model-transformation
+                                        function.</p>
+                                        <p>Using the computation
+                                        returned by
+                                        <code>state_machine0</code> also
+                                        changes: instead of a
+                                        “set-state” function, we get a
+                                        function that “injects” our
+                                        <code>Action.t</code> into a
+                                        <code>unit Effect.t</code>.</p>
+                                        <p>Now, when a button is clicked
+                                        multiple times in quick
+                                        succession, instead of calling
+                                        <code>set_state</code> multiple
+                                        times with the same value,
+                                        Bonsai will call
+                                        <code>inject</code> multiple
+                                        times, and they’ll be processed
+                                        by <code>apply_action</code> in
+                                        order, producing the correct
+                                        result.</p>
+                                        <aside>
+                                        <p><code>state_machine0</code>
+                                        has a “0” at the end to indicate
+                                        that it takes “0” additional
+                                        inputs. Compare the type
+                                        signatures between
+                                        <code>state_machine0</code> and
+                                        <code>state_machine1</code>:</p>
+                                        <div class="sourceCode"
+                                        id="cb8"><pre
+                                        class="sourceCode diff"><code class="sourceCode diff"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="st">-val state_machine0</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="va">+val state_machine1</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>   :  Source_code_position.t</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>   -&gt; (module Model with type t = &#39;model)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>   -&gt; (module Action with type t = &#39;action)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>   -&gt; default_model:&#39;model</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>   -&gt; apply_action:</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        (inject:(&#39;action -&gt; unit Effect.t)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>         -&gt; schedule_event:(unit Effect.t -&gt; unit)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="va">+        -&gt; &#39;input</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>         -&gt; &#39;model</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>         -&gt; &#39;action</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>         -&gt; &#39;model)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="va">+  -&gt; &#39;input Value.t</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>   -&gt; (&#39;model * (&#39;action -&gt; unit Effect.t)) Computation.t</span></code></pre></div>
+                                        <p>The input is provided to the
+                                        state-machine in
+                                        <code>'input Value.t</code>
+                                        form, but is available inside
+                                        the <code>apply_action</code> as
+                                        a <code>'input</code>. This
+                                        allows the state-transition
+                                        function to depend on the
+                                        results of other
+                                        computations.</p>
+                                        <p>There is no
+                                        <code>state_machine2</code>, but
+                                        implementing one would be
+                                        trivial, by tupling the input
+                                        <code>Value.t</code>, and
+                                        destructuring the inputs inside
+                                        <code>apply_action</code>.</p>
+                                        </aside>
+                                        <h1
+                                        id="why-should-functional-programmers-be-okay-with-stateful-components">Why
+                                        should functional programmers be
+                                        okay with stateful
+                                        components?</h1>
+                                        <p>UI programming is inherently
+                                        stateful. Even a UI element as
+                                        simple as a textbox needs to
+                                        keep some state around to store
+                                        the current contents of the
+                                        textbox.</p>
+                                        <p>Sadly, many of the tools that
+                                        functional programmers use for
+                                        dealing with state almost
+                                        exclusively involve moving that
+                                        state out of their programs into
+                                        a database, or by pulling
+                                        mutable state out into a small
+                                        part of the program. These
+                                        strategies can keep the majority
+                                        of programs relatively pure and
+                                        easy to test, but sadly, they
+                                        don’t scale well to UI
+                                        components for a few
+                                        reasons:</p>
+                                        <ol type="1">
+                                        <li>The stateful nature is
+                                        something that is desirable to
+                                        test!</li>
+                                        <li>Bonsai needs to know when
+                                        the state for a component
+                                        changes so that it can re-fire
+                                        calculations of down-stream
+                                        components.</li>
+                                        <li>If every component were
+                                        provided a state-getter and
+                                        state-setter, this would make
+                                        component composition more
+                                        manual work for the programmer;
+                                        as applications get bigger and
+                                        bigger, the root element would
+                                        need to manage potentially
+                                        dozens or hundreds of states for
+                                        each transitive
+                                        sub-component.</li>
+                                        <li>Adding or removing state
+                                        from a component would be a
+                                        breaking change for everyone
+                                        using it.</li>
+                                        </ol>
+                                        <p>One way to look at UI
+                                        components is that they are
+                                        portals through which an
+                                        application interacts with the
+                                        messy world. The job of a
+                                        component is to translate the
+                                        unpredictable user actions into
+                                        a well-understood piece of
+                                        data.</p>
+                                        <p>Although the fact that
+                                        components are stateful might
+                                        injure your functional
+                                        programming dogmatism, in fact,
+                                        it is quite in line with
+                                        functional programming
+                                        principles, which aim to isolate
+                                        effects. The most common way to
+                                        isolate effects is by having a
+                                        small kernel of effectful code
+                                        invoke the pure majority of the
+                                        logic; in other words, we
+                                        isolate state by shifting it
+                                        toward the root of the program.
+                                        Bonsai offers an alternative
+                                        tool for isolation. With Bonsai
+                                        UI components, effectful code
+                                        gets wrapped up and managed so
+                                        that the interface provided by
+                                        the component remains pure; in
+                                        other words, we isolate state by
+                                        shifting it toward the leaves of
+                                        the program.</p>
+                                        <p>On to <a
+                                        href="./04-forms.html">Chapter
+                                        4: Forms</a>.</p>
+                                    </div>
+            </div>
+        </div>
+        <!-- <script src="https://vjs.zencdn.net/5.4.4/video.js"></script> -->
+
+    </body>
+</html>

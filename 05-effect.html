@@ -1,0 +1,392 @@
+<!doctype html>
+<html >
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" /> -->
+
+        <!-- <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" /> -->
+
+        <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+
+        <!-- <script src="script.js"></script> -->
+
+        <!-- <script src="jquery.sticky-kit.js "></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/ryangrose/easy-pandoc-templates@948e28e5/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script> -->
+        <!-- <meta name="generator" content="pandoc" /> -->
+                        <title>  effect</title>
+                        <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #eceff4;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #88c0d0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #a3be8c; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #bf616a; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #a3be8c; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #88c0d0; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #88c0d0; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #a3be8c; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #a3be8c; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #88c0d0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #bf616a; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #a3be8c; } /* SpecialChar */
+code span.ss { color: #a3be8c; } /* SpecialString */
+code span.st { color: #a3be8c; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #a3be8c; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+        </style>
+                                    </head>
+    <body>
+
+
+                <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span class="doc-title">
+                        <span id="bonsai">bonsai</span> 
+                        <span id="slash"> / </span> 
+                         effect
+                    </span>
+                    <ul class="nav pull-right doc-info">
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="container">
+            <div class="row">
+                <div class="toc_and_chapters">
+                                        <div id="TOC" class="span3">
+                        <h3> This chapter</h3>
+                        <div class="well toc">
+
+                            <ul>
+                            <li><a href="#making-an-effect"
+                            id="toc-making-an-effect">Making an
+                            Effect</a></li>
+                            <li><a href="#using-effects"
+                            id="toc-using-effects">Using
+                            Effects</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                                        <div id="chapters" class="span3">
+                        <h3> All chapters </h3>
+                        <ul>
+                        <li><a href="./00-introduction.html">  introduction </a></li>
+                        <li><a href="./01-virtual_dom.html">  virtual_dom </a></li>
+                        <li><a href="./02-dynamism.html">  dynamism </a></li>
+                        <li><a href="./03-state.html">  state </a></li>
+                        <li><a href="./04-forms.html">  forms </a></li>
+                        <li><a href="./05-effect.html">  effect </a></li>
+                        <li><a href="./07-flow.html">  flow </a></li>
+                        <li><a href="./08-css.html">  css </a></li>
+                        <li><a href="./09-edge-triggering.html">  edge triggering </a></li>
+                        </ul>                    </div>
+                </div>
+                <div class="span9">
+                                        <p>As we saw back in the <a
+                                        href="./03-state.html">chapter
+                                        about state</a>, values with
+                                        type
+                                        <code>unit Vdom.Effect.t</code>
+                                        are used to schedule updates to
+                                        stateful components. However,
+                                        the <code>Effect.t</code> type
+                                        can also be used to perform
+                                        arbitrary side-effectful actions
+                                        that return values. Most
+                                        commonly, these side effects
+                                        involve calling RPCs.</p>
+                                        <p>A <code>'a Effect.t</code>
+                                        represents a side effect which,
+                                        when performed, produces a value
+                                        of type <code>'a</code>.</p>
+                                        <p>There’s a lot of overlap
+                                        between <code>'a Effect.t</code>
+                                        and
+                                        <code>'a Deferred.t</code>:</p>
+                                        <ol type="1">
+                                        <li>Both are (likely) performing
+                                        side effects (like calling
+                                        RPCs)</li>
+                                        <li>They produce values of type
+                                        <code>'a</code> when
+                                        completed</li>
+                                        <li>This result can be computed
+                                        at some point in the future</li>
+                                        </ol>
+                                        <p>So it’s important to note one
+                                        major difference between
+                                        <code>'a Effect.t</code> and
+                                        <code>'a Deferred.t</code>: when
+                                        bound (via
+                                        <code>let%bind</code>) multiple
+                                        times, a <code>Deferred</code>
+                                        will execute its side effect
+                                        exactly once, but an
+                                        <code>Effect</code> will side
+                                        effect as many times as it is
+                                        <code>bound</code>.</p>
+                                        <p>This difference exists for
+                                        both theoretical and practical
+                                        purposes.</p>
+                                        <p>On the theoretical side,
+                                        <code>Deferred.t</code>, at its
+                                        core, represents a value that
+                                        will be computed at some point
+                                        in the future (and may perform
+                                        side effects in order to
+                                        calculate that value), while
+                                        <code>Effect.t</code> is a
+                                        first-class representation of
+                                        the side effect itself, which
+                                        happens to produce a value.</p>
+                                        <p>On the practical side,
+                                        <code>Deferred.t</code> just
+                                        doesn’t mesh with the
+                                        incremental computational model
+                                        that Bonsai provides. In
+                                        particular, a value of type
+                                        <code>'a Deferred.t Value.t</code>
+                                        is quite hard to use correctly,
+                                        as Bonsai has no way of knowing
+                                        that the value contained inside
+                                        is a Deferred, and it won’t
+                                        re-compute when the deferred is
+                                        completed.</p>
+                                        <!--
+                                        Also, unit tests for Bonsai\_web applications require compiling to JavaScript,
+                                        and our JavaScript expect-test library is not capable of running Async tests,
+                                        so `Effect.t` is used with synchronous functions to test apps that will use
+                                        asyncronous functions in production.
+                                        -->
+                                        <h1 id="making-an-effect">Making
+                                        an Effect</h1>
+                                        <p>The main use-case for Effect
+                                        is for exposing RPCs to the
+                                        Bonsai application, so for the
+                                        rest of this document, we’re
+                                        going to be interacting with a
+                                        function that has this type
+                                        signature, which we’ll pretend
+                                        is an RPC:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb1"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> uppercase : <span class="dt">string</span> -&gt; <span class="dt">string</span> Deferred.t</span></code></pre></div>
+                                        <p>Turning
+                                        <code>uppercase</code> into a
+                                        function that returns an
+                                        <code>Effect</code> is easy with
+                                        <code>Bonsai_web.Effect.of_deferred_fun</code></p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb2"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> of_deferred_fun : (&#39;query -&gt; &#39;response Deferred.t) -&gt; &#39;query -&gt; &#39;response t</span></code></pre></div>
+                                        <aside>
+                                        <p><code>of_deferred_fun</code>
+                                        is defined inside
+                                        <code>Bonsai_web</code> instead
+                                        of just <code>Bonsai</code>
+                                        because <code>Bonsai</code>
+                                        doesn’t depend on
+                                        <code>Async</code>. All the rest
+                                        of the Effect functions are in
+                                        <code>Bonsai.Effect</code> (but
+                                        re-exported for
+                                        <code>Bonsai_web.Effect</code>).</p>
+                                        </aside>
+                                        <p>Using
+                                        <code>Bonsai_web.of_deferred_fun</code>,
+                                        we can make a new function that
+                                        returns an <code>Effect.t</code>
+                                        instead of
+                                        <code>Deferred.t</code></p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/effect_examples.ml,part=uppercase_e -->
+                                        <div class="sourceCode"
+                                        id="cb3"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> uppercase_e : <span class="dt">string</span> -&gt; <span class="dt">string</span> Effect.t = Bonsai_web.Effect.of_deferred_fun uppercase</span></code></pre></div>
+                                        <h1 id="using-effects">Using
+                                        Effects</h1>
+                                        <p>By converting a
+                                        deferred-returning function to
+                                        return an effect, we can more
+                                        easily compose it with other
+                                        Bonsai APIs, like event
+                                        handlers.</p>
+                                        <p>In the following example, we
+                                        have a textbox, a button, and a
+                                        “results” display. We want to
+                                        use the <code>uppercase_e</code>
+                                        event-returning function from
+                                        above to compute the uppercased
+                                        value of the contents of the
+                                        textbox when the button is
+                                        clicked.</p>
+                                        <p>The first implementation
+                                        looks like this.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/effect_examples.ml,part=uppercase_rpc_sender -->
+                                        <div class="sourceCode"
+                                        id="cb4"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> Request_state = <span class="kw">struct</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">type</span> t =</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    | Empty</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    | Pending</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    | Filled <span class="kw">of</span> <span class="dt">string</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  [@@deriving sexp, equal]</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> to_string = <span class="kw">function</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    | Empty -&gt; <span class="st">&quot;&lt;no request sent&gt;&quot;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    | Pending -&gt; <span class="st">&quot;pending...&quot;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    | Filled s -&gt; s</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  ;;</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> uppercase_rpc_sender =</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub textbox = Forms.Elements.Textbox.<span class="dt">string</span> () <span class="kw">in</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub result_state = Bonsai.state (<span class="kw">module</span> Request_state) ~default_model:Empty <span class="kw">in</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr textbox = textbox</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> result_state, set_result = result_state <span class="kw">in</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> on_submit (contents : <span class="dt">string</span>) : <span class="dt">unit</span> Effect.t =</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%bind.Effect s = uppercase_e contents <span class="kw">in</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    set_result (Filled s)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> form_view =</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    textbox</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    |&gt; Forms.label <span class="st">&quot;text to capitalize&quot;</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    |&gt; Forms.view_as_vdom ~on_submit:(Forms.Submit.create ~f:on_submit ())</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    ~attr:(Vdom.Attr.style (Css_gen.display `Inline_grid))</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    [ form_view; Vdom.Node.text (Request_state.to_string result_state) ]</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#uppercase_rpc_sender">
+                                        </iframe>
+                                        <aside>
+                                        <p>Please note that the
+                                        “Pending” state is not used
+                                        (yet!)</p>
+                                        </aside>
+                                        <p>Let’s zoom in on the
+                                        <code>on_submit</code>
+                                        handler:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb5"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> on_submit (contents : <span class="dt">string</span>) : <span class="dt">unit</span> Effect.t =</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%bind.Effect s = uppercase_e contents <span class="kw">in</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  set_result (Filled s)</span></code></pre></div>
+                                        <p>By calling the
+                                        <code>uppercase_e</code>
+                                        function, a
+                                        <code>string Effect.t</code> is
+                                        returned. Binding on that value
+                                        gives us (at some point in the
+                                        future) the result of the
+                                        operation, which we immediately
+                                        pass through to update the state
+                                        of our component.</p>
+                                        <p>But as mentioned above, the
+                                        “Pending” state was never used.
+                                        We can implement that by adding
+                                        another bind to the effect,
+                                        setting “Pending”
+                                        immediately.</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb6"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> on_submit (contents : <span class="dt">string</span>) : <span class="dt">unit</span> Vdom.Effect.t =</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="kw">open</span> Bonsai.Effect.Let_syntax <span class="kw">in</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%bind () = set_result Pending <span class="kw">in</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%bind s = uppercase_e contents <span class="kw">in</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  set_result (Filled s)</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#uppercase_rpc_sender_bind">
+                                        </iframe>
+                                        <p>Next, read the <a
+                                        href="../blogs/testing.html">chapter
+                                        on testing</a>.</p>
+                                    </div>
+            </div>
+        </div>
+        <!-- <script src="https://vjs.zencdn.net/5.4.4/video.js"></script> -->
+
+    </body>
+</html>

@@ -1,0 +1,621 @@
+<!doctype html>
+<html >
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" /> -->
+
+        <!-- <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" /> -->
+
+        <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+
+        <!-- <script src="script.js"></script> -->
+
+        <!-- <script src="jquery.sticky-kit.js "></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/ryangrose/easy-pandoc-templates@948e28e5/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script> -->
+        <!-- <meta name="generator" content="pandoc" /> -->
+                        <title>  flow</title>
+                        <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #eceff4;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #88c0d0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #a3be8c; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #bf616a; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #a3be8c; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #88c0d0; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #88c0d0; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #a3be8c; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #a3be8c; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #88c0d0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #bf616a; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #a3be8c; } /* SpecialChar */
+code span.ss { color: #a3be8c; } /* SpecialString */
+code span.st { color: #a3be8c; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #a3be8c; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+        </style>
+                                    </head>
+    <body>
+
+
+                <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span class="doc-title">
+                        <span id="bonsai">bonsai</span> 
+                        <span id="slash"> / </span> 
+                         flow
+                    </span>
+                    <ul class="nav pull-right doc-info">
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="container">
+            <div class="row">
+                <div class="toc_and_chapters">
+                                        <div id="TOC" class="span3">
+                        <h3> This chapter</h3>
+                        <div class="well toc">
+
+                            <ul>
+                            <li><a href="#components-as-dags"
+                            id="toc-components-as-dags">Components as
+                            DAGs</a></li>
+                            <li><a href="#matchsub"
+                            id="toc-matchsub">match%sub</a></li>
+                            <li><a href="#bonsai.assoc"
+                            id="toc-bonsai.assoc">Bonsai.assoc</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                                        <div id="chapters" class="span3">
+                        <h3> All chapters </h3>
+                        <ul>
+                        <li><a href="./00-introduction.html">  introduction </a></li>
+                        <li><a href="./01-virtual_dom.html">  virtual_dom </a></li>
+                        <li><a href="./02-dynamism.html">  dynamism </a></li>
+                        <li><a href="./03-state.html">  state </a></li>
+                        <li><a href="./04-forms.html">  forms </a></li>
+                        <li><a href="./05-effect.html">  effect </a></li>
+                        <li><a href="./07-flow.html">  flow </a></li>
+                        <li><a href="./08-css.html">  css </a></li>
+                        <li><a href="./09-edge-triggering.html">  edge triggering </a></li>
+                        </ul>                    </div>
+                </div>
+                <div class="span9">
+                                        <p>This chapter of the guide is
+                                        a collection of smaller topics
+                                        that are valuable for
+                                        structuring components.</p>
+                                        <h1
+                                        id="components-as-dags">Components
+                                        as DAGs</h1>
+                                        <p>One of the biggest
+                                        differences between Bonsai and
+                                        other virtual-dom based UI
+                                        frameworks (such as React, Vue,
+                                        or Elm) is that Bonsai
+                                        structures the composition of UI
+                                        components as a Directed Acyclic
+                                        Graph instead of as a tree.</p>
+                                        <p>What this means in practice
+                                        is that the output of one
+                                        component can be fed as input to
+                                        another component.</p>
+                                        <p>To illustrate this, we’ll
+                                        build a textbox component whose
+                                        placeholder text is specified
+                                        dynamically. This textbox
+                                        component is so similar to the
+                                        one constructed in the <a
+                                        href="./03-state.html">state
+                                        chapter</a> that the diff
+                                        between that version and the new
+                                        one is shown below for
+                                        convenience.</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb1"><pre
+                                        class="sourceCode diff"><code class="sourceCode diff"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">-let textbox =</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">+let textbox ~placeholder =</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>   let%sub state, set_state = Bonsai.state (module String) ~default_model:&quot;&quot; in</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>   (let%arr state = state</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      and set_state = set_state</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="va">+     and placeholder = placeholder in</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      let view =</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        Vdom.Node.input</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>          ~attr:(Vdom.Attr.many [ Vdom.Attr.value_prop state</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>          ; Vdom.Attr.on_input (fun _ new_text -&gt; set_state new_text)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="va">+         ; Vdom.Attr.placeholder placeholder</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>          ])</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>          ()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      in</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      state, view)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>And a basic usage of the new
+                                        component (with a constant
+                                        placeholder)</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/flow_examples.ml,part=textbox_with_placeholder -->
+                                        <div class="sourceCode"
+                                        id="cb2"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> textbox_with_placeholder = textbox ~placeholder:(Value.return <span class="st">&quot;the placeholder&quot;</span>)</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#textbox_with_placeholder">
+                                        </iframe>
+                                        <p>And because of the graph-like
+                                        structure of a Bonsai app, we
+                                        can trivially chain two
+                                        textboxes together so that the
+                                        contents of one of the output of
+                                        one textbox is used as the
+                                        placeholder for the next.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/flow_examples.ml,part=textbox_chaining -->
+                                        <div class="sourceCode"
+                                        id="cb3"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> textbox_chaining =</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub a_contents, a_view = textbox ~placeholder:(Value.return <span class="st">&quot;&quot;</span>) <span class="kw">in</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub _, b_view = textbox ~placeholder:a_contents <span class="kw">in</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr a_view = a_view</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> b_view = b_view <span class="kw">in</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> style = Vdom.Attr.style (Css_gen.display `Inline_grid) <span class="kw">in</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div ~attr:style [ a_view; b_view ]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#textbox_chaining">
+                                        </iframe>
+                                        <p>Clearly, chaining together
+                                        two textboxes to set the
+                                        placeholder text isn’t
+                                        particularly useful (the
+                                        examples are small though!), but
+                                        in real applications, this kind
+                                        of component dependency
+                                        structuring is valuable in a
+                                        myriad of ways:</p>
+                                        <ul>
+                                        <li>The output of a
+                                        “tab-selector” component could
+                                        include the view for a tab-bar,
+                                        but also a value for the
+                                        currently selected tab. Then
+                                        other components could read that
+                                        value and respond
+                                        accordingly.</li>
+                                        <li>A form could dynamically
+                                        change its contents based on the
+                                        values of previously filled out
+                                        form contents.</li>
+                                        <li>At the top of an application
+                                        component graph, a “light mode
+                                        or dark mode” checkbox component
+                                        could be added, and the current
+                                        value (either light or dark)
+                                        could be passed down to
+                                        downstream components to
+                                        influence the way that they
+                                        display.</li>
+                                        </ul>
+                                        <h1 id="matchsub">match%sub</h1>
+                                        <p><code>let%sub</code> should
+                                        be familiar to you by now, but
+                                        there’s actually a more powerful
+                                        form of variable substitution
+                                        which permits a limited form of
+                                        dynamism, match expressions!
+                                        With <code>match%sub</code>, a
+                                        <code>'a Value.t</code> is
+                                        matched on, and any bindings in
+                                        the match arm are projected out
+                                        into their <code>Value.t</code>
+                                        form. Let’s look at what that
+                                        means in practice!</p>
+                                        <p>In the following example,
+                                        we’ll avoid building the 2nd
+                                        textbox if the first textbox is
+                                        either empty or only contains
+                                        whitespace.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/flow_examples.ml,part=textbox_chaining_match -->
+                                        <div class="sourceCode"
+                                        id="cb4"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> textbox_matching =</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub a_contents, a_view = textbox ~placeholder:(Value.return <span class="st">&quot;&quot;</span>) <span class="kw">in</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> a_contents =</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%map s = a_contents <span class="kw">in</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> s = <span class="dt">String</span>.strip s <span class="kw">in</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="dt">String</span>.is_empty s <span class="kw">then</span> <span class="dt">None</span> <span class="kw">else</span> <span class="dt">Some</span> s</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">match</span>%sub a_contents <span class="kw">with</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  | <span class="dt">None</span> -&gt;</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%arr a_view = a_view <span class="kw">in</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> message = Vdom.Node.div [ Vdom.Node.text <span class="st">&quot;&lt;a is empty&gt;&quot;</span> ] <span class="kw">in</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.div [ a_view; message ]</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  | <span class="dt">Some</span> placeholder -&gt;</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%sub _, b_view = textbox ~placeholder <span class="kw">in</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%arr a_view = a_view</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">and</span> b_view = b_view <span class="kw">in</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> style = Vdom.Attr.style (Css_gen.display `Inline_grid) <span class="kw">in</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.div ~attr:style [ a_view; b_view ]</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#textbox_chaining_match">
+                                        </iframe>
+                                        <p>There are a few details to
+                                        note about some of the types up
+                                        above</p>
+                                        <ol type="1">
+                                        <li>The matched value has type
+                                        <code>'a Value.t</code></li>
+                                        <li>The values produced by each
+                                        of the match-arms must be of
+                                        type
+                                        <code>'b Computation.t</code></li>
+                                        <li>The overall type of the
+                                        <code>match%sub</code>
+                                        expression has type
+                                        <code>'b Computation.t</code></li>
+                                        <li>Any identifiers bound during
+                                        matching (in the above example,
+                                        this is just
+                                        <code>placeholder</code>) are
+                                        available in
+                                        <code>Value.t</code> form.</li>
+                                        </ol>
+                                        <p>It is important to know that
+                                        at any point in time, only one
+                                        of the arms in the pattern match
+                                        is active, so the components in
+                                        the not-matched arms are not
+                                        being computed.</p>
+                                        <p>In addition to
+                                        <code>match%sub</code>,
+                                        <code>if%sub</code> also exists,
+                                        with the exact same semantics,
+                                        but specialized for
+                                        booleans.</p>
+                                        <h1
+                                        id="bonsai.assoc">Bonsai.assoc</h1>
+                                        <p>Up until now, Bonsai hasn’t
+                                        had any real tools for dealing
+                                        with dynamically sized
+                                        collections of components. Sure,
+                                        you could manually re-use a
+                                        text-box component twice, but if
+                                        the number of distinct
+                                        components is determined at
+                                        runtime, writing out a bunch of
+                                        <code>let%sub</code> won’t cut
+                                        it.</p>
+                                        <p>That’s where
+                                        <code>Bonsai.assoc</code> comes
+                                        in. Let’s start by looking at
+                                        its type signature:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb5"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> assoc</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  :  (&#39;key, &#39;cmp) comparator</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  -&gt; (&#39;key, &#39;data, &#39;cmp) <span class="dt">Map</span>.t Value.t</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  -&gt; f:(&#39;key Value.t -&gt; &#39;data Value.t -&gt; &#39;result Computation.t)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  -&gt; (&#39;key, &#39;result, &#39;cmp) <span class="dt">Map</span>.t Computation.t</span></code></pre></div>
+                                        <p>Breaking the parts of the
+                                        signature down one-by-one we
+                                        have</p>
+                                        <ol type="1">
+                                        <li><code>('key, 'cmp) comparator</code>:
+                                        A comparator is required; this
+                                        is typically just
+                                        <code>(module Int)</code> or
+                                        <code>(module My_type)</code>
+                                        where the type is comparable,
+                                        and has the sexp functions
+                                        defined.</li>
+                                        <li><code>('key, 'data, 'cmp) Map.t Value.t</code>:
+                                        A dynamic map from
+                                        <code>'key</code> to
+                                        <code>'data</code>.</li>
+                                        <li>a named function
+                                        <code>f</code> with type
+                                        <code>'key Value.t -&gt; 'data Value.t -&gt; 'result    Computation.t</code>;
+                                        this function will be called
+                                        with every key-value pair in the
+                                        map, and produces a computation
+                                        containing
+                                        <code>'result</code>.</li>
+                                        <li>Finally, the return value of
+                                        <code>assoc</code> is
+                                        <code>('key, 'result, 'cmp) Map.t    Computation.t</code>,
+                                        a map from the same key as the
+                                        input to the
+                                        <code>'result</code> produced in
+                                        the <code>f</code>
+                                        function.</li>
+                                        </ol>
+                                        <p>This type signature is
+                                        remarkably close to the regular
+                                        OCaml function
+                                        <code>Map.mapi</code>, which has
+                                        this type signature:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb6"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> mapi</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>:  (&#39;key, &#39;data, &#39;cmp) <span class="dt">Map</span>.t</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>-&gt; f:(key:&#39;key -&gt; data:&#39;data -&gt; &#39;result)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>-&gt; (&#39;key, &#39;result, &#39;cmp) <span class="dt">Map</span>.t</span></code></pre></div>
+                                        <p>But of course the Bonsai
+                                        version has a bunch of
+                                        <code>Value.t</code> and
+                                        <code>Computation.t</code> in
+                                        it’s type signature, so what are
+                                        those types giving us?</p>
+                                        <p>The first benefit to
+                                        <code>assoc</code> is that the
+                                        computation inside of
+                                        <code>f</code> is only evaluated
+                                        once per key/value pair, after
+                                        which any updates to the
+                                        <code>data</code> travel through
+                                        the regular bonsai
+                                        <code>Value</code> graph
+                                        optimization. This means that if
+                                        the input map is 100,000
+                                        elements large, but only one of
+                                        the keys has data that is
+                                        changing frequently, only the
+                                        one component for that key will
+                                        be involved in recomputing the
+                                        eventual result of the overall
+                                        function.</p>
+                                        <p>The other benefit to using
+                                        assoc is apparent from looking
+                                        at the type of the function: the
+                                        <code>f</code> function returns
+                                        a <code>Computation.t</code>,
+                                        which means that every key/value
+                                        pair in the input map is its own
+                                        component, each with it’s own
+                                        independent state!</p>
+                                        <p>For this example, we’ll
+                                        re-use the “counter” component
+                                        defined in the last section of
+                                        the <a
+                                        href="./03-state.html">state
+                                        chapter</a>, but this time,
+                                        there’ll be a bunch of them!</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/flow_examples.ml,part=multiple_counters -->
+                                        <div class="sourceCode"
+                                        id="cb7"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> multiple_counters (<span class="dt">input</span> : <span class="dt">unit</span> <span class="dt">String</span>.<span class="dt">Map</span>.t Value.t) =</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub counters =</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    Bonsai.assoc</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      (<span class="kw">module</span> <span class="dt">String</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">input</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      ~f:(<span class="kw">fun</span> _key (_ : <span class="dt">unit</span> Value.t) -&gt; State_examples.counter_state_machine)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr counters = counters <span class="kw">in</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.table</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    (counters</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>     |&gt; <span class="dt">Map</span>.to_alist</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>     |&gt; <span class="dt">List</span>.map ~f:(<span class="kw">fun</span> (key, vdom) -&gt;</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>       <span class="kw">let</span> <span class="kw">open</span> Vdom.Node <span class="kw">in</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>       <span class="kw">let</span> name = td [ Vdom.Node.text key ] <span class="kw">in</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>       <span class="kw">let</span> counter = td [ vdom ] <span class="kw">in</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>       Vdom.Node.tr [ name; counter ]))</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>and to start out with we’ll
+                                        use a constant map as an input
+                                        to the component:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/flow_examples.ml,part=multiple_counters_constant_map -->
+                                        <div class="sourceCode"
+                                        id="cb8"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> multiple_counters_constant =</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  multiple_counters</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    ([ <span class="st">&quot;hello&quot;</span>, (); <span class="st">&quot;there&quot;</span>, () ] |&gt; <span class="dt">Map</span>.of_alist_exn (<span class="kw">module</span> <span class="dt">String</span>) |&gt; Value.return)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#multiple_counters_constant">
+                                        </iframe>
+                                        <p>and while this does show off
+                                        how to associate a component
+                                        across a map, using
+                                        <code>Value.return</code> makes
+                                        it hard to see the “dynamic”
+                                        aspect. So let’s build a
+                                        dynamically editable map!</p>
+                                        <aside>
+                                        <p>This final code example is
+                                        less about
+                                        <code>Bonsai.assoc</code> and
+                                        more about integrating concepts
+                                        from the rest of the bonsai
+                                        guide:</p>
+                                        <ul>
+                                        <li><code>Bonsai.state_machine</code>
+                                        tracks and edits a map for the
+                                        counters</li>
+                                        <li>Bonsai’s Forms library is
+                                        used to interact with the
+                                        state-machine to add new
+                                        entries</li>
+                                        <li><code>assoc</code> builds up
+                                        the table of counters from the
+                                        map inside state-machine.</li>
+                                        </ul>
+                                        </aside>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/flow_examples.ml,part=kudo_tracker -->
+                                        <div class="sourceCode"
+                                        id="cb9"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> Model = <span class="kw">struct</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">type</span> t = <span class="dt">unit</span> <span class="dt">String</span>.<span class="dt">Map</span>.t [@@deriving sexp, equal]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> default = <span class="dt">String</span>.<span class="dt">Map</span>.of_alist_exn [ <span class="st">&quot;Dave&quot;</span>, (); <span class="st">&quot;Jill&quot;</span>, () ]</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> Action = <span class="kw">struct</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">type</span> t =</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    | Add <span class="kw">of</span> <span class="dt">string</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    | Remove <span class="kw">of</span> <span class="dt">string</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  [@@deriving sexp_of]</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> people =</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  Bonsai.state_machine0</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">module</span> Model)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">module</span> Action)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    ~default_model:Model.default</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    ~apply_action:(<span class="kw">fun</span> ~inject:_ ~schedule_event:_ model action -&gt;</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>      <span class="kw">match</span> action <span class="kw">with</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>      | Add name -&gt; <span class="dt">Map</span>.set model ~key:name ~data:()</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>      | Remove name -&gt; <span class="dt">Map</span>.remove model name)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> add_new_person_form ~inject_add_person =</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub form = Form.Elements.Textbox.<span class="dt">string</span> () <span class="kw">in</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr form = form</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> inject_add_person = inject_add_person <span class="kw">in</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> on_submit name = Vdom.Effect.Many [ Form.set form <span class="st">&quot;&quot;</span>; inject_add_person name ] <span class="kw">in</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>  form</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>  |&gt; Form.label <span class="st">&quot;name&quot;</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>  |&gt; Form.validate ~f:(<span class="kw">fun</span> name -&gt;</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="dt">String</span>.for_all name ~f:<span class="dt">Char</span>.is_whitespace</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="kw">then</span> Error (Error.of_string <span class="st">&quot;name must not be empty&quot;</span>)</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">else</span> Ok ())</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>  |&gt; Form.view_as_vdom ~on_submit:(Form.Submit.create ~f:on_submit ())</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> people_table people ~inject_remove_person =</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>  Bonsai.assoc</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">module</span> <span class="dt">String</span>)</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    people</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>    ~f:(<span class="kw">fun</span> name (_ : <span class="dt">unit</span> Value.t) -&gt;</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span>%sub counter = State_examples.counter_state_machine <span class="kw">in</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span>%arr counter = counter</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>      <span class="kw">and</span> name = name</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>      <span class="kw">and</span> inject_remove_person = inject_remove_person <span class="kw">in</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> <span class="kw">open</span> Vdom.Node <span class="kw">in</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> remove_person =</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>        td</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>          [ button</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>              ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; inject_remove_person name))</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>              [ text <span class="st">&quot;x&quot;</span> ]</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>          ]</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>      <span class="kw">in</span></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> name = td [ text name ] <span class="kw">in</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> counter = td [ counter ] <span class="kw">in</span></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>      tr [ name; counter; remove_person ])</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> kudo_tracker =</span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub people, inject_action = people <span class="kw">in</span></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub form =</span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> inject_add_person =</span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span>%map inject_action = inject_action <span class="kw">in</span></span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a>      <span class="kw">fun</span> name -&gt; inject_action (Add name)</span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span></span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a>    add_new_person_form ~inject_add_person</span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub people_table =</span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> inject_remove_person =</span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span>%map inject_action = inject_action <span class="kw">in</span></span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a>      <span class="kw">fun</span> name -&gt; inject_action (Remove name)</span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span></span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a>    people_table people ~inject_remove_person</span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr people_table = people_table</span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> form = form <span class="kw">in</span></span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="kw">open</span> Vdom.Node <span class="kw">in</span></span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a>  div</span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a>    [ h2 [ text <span class="st">&quot;kudos tracker&quot;</span> ]</span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a>    ; table</span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a>        [ thead [ tr [ th [ text <span class="st">&quot;Name&quot;</span> ]; th [ text <span class="st">&quot;# Kudos&quot;</span> ]; th [ text <span class="st">&quot;Remove&quot;</span> ] ] ]</span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a>        ; tbody (<span class="dt">Map</span>.data people_table)</span>
+<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a>    ; h2 [ text <span class="st">&quot;Add Person&quot;</span> ]</span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a>    ; form</span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#kudo_tracker">
+                                        </iframe>
+                                    </div>
+            </div>
+        </div>
+        <!-- <script src="https://vjs.zencdn.net/5.4.4/video.js"></script> -->
+
+    </body>
+</html>

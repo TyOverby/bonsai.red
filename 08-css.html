@@ -1,0 +1,883 @@
+<!doctype html>
+<html >
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" /> -->
+
+        <!-- <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" /> -->
+
+        <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+
+        <!-- <script src="script.js"></script> -->
+
+        <!-- <script src="jquery.sticky-kit.js "></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/ryangrose/easy-pandoc-templates@948e28e5/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script> -->
+        <!-- <meta name="generator" content="pandoc" /> -->
+                        <title>  css</title>
+                        <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #eceff4;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #88c0d0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #a3be8c; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #bf616a; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #a3be8c; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #88c0d0; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #88c0d0; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #a3be8c; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #a3be8c; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #88c0d0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #bf616a; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #a3be8c; } /* SpecialChar */
+code span.ss { color: #a3be8c; } /* SpecialString */
+code span.st { color: #a3be8c; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #a3be8c; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+        </style>
+                                    </head>
+    <body>
+
+
+                <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span class="doc-title">
+                        <span id="bonsai">bonsai</span> 
+                        <span id="slash"> / </span> 
+                         css
+                    </span>
+                    <ul class="nav pull-right doc-info">
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="container">
+            <div class="row">
+                <div class="toc_and_chapters">
+                                        <div id="TOC" class="span3">
+                        <h3> This chapter</h3>
+                        <div class="well toc">
+
+                            <ul>
+                            <li><a href="#handwritten-.css-files"
+                            id="toc-handwritten-.css-files">Handwritten
+                            .css Files</a></li>
+                            <li><a href="#vdom.attr.style"
+                            id="toc-vdom.attr.style">Vdom.Attr.style</a></li>
+                            <li><a href="#css-ppx" id="toc-css-ppx">CSS
+                            Ppx</a></li>
+                            <li><a href="#rewrite-flag"
+                            id="toc-rewrite-flag">[~rewrite]
+                            flag</a></li>
+                            <li><a href="#theming-through-ppx-css"
+                            id="toc-theming-through-ppx-css">Theming
+                            through PPX CSS</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                                        <div id="chapters" class="span3">
+                        <h3> All chapters </h3>
+                        <ul>
+                        <li><a href="./00-introduction.html">  introduction </a></li>
+                        <li><a href="./01-virtual_dom.html">  virtual_dom </a></li>
+                        <li><a href="./02-dynamism.html">  dynamism </a></li>
+                        <li><a href="./03-state.html">  state </a></li>
+                        <li><a href="./04-forms.html">  forms </a></li>
+                        <li><a href="./05-effect.html">  effect </a></li>
+                        <li><a href="./07-flow.html">  flow </a></li>
+                        <li><a href="./08-css.html">  css </a></li>
+                        <li><a href="./09-edge-triggering.html">  edge triggering </a></li>
+                        </ul>                    </div>
+                </div>
+                <div class="span9">
+                                        <p>Styling an application is
+                                        very important. Not only is it
+                                        critical for making an app
+                                        <em>look</em> good, but
+                                        “styling” is also responsible
+                                        for component layout.</p>
+                                        <p>However, there are a few
+                                        different ways to include style
+                                        information in your app or
+                                        library, each with their own
+                                        tradeoffs:</p>
+                                        <ol type="1">
+                                        <li>Hand-written .css files</li>
+                                        <li><code>style</code>
+                                        properties in vdom nodes</li>
+                                        <li><code>ppx_css</code> for
+                                        inline stylesheets</li>
+                                        </ol>
+                                        <h1
+                                        id="handwritten-.css-files">Handwritten
+                                        .css Files</h1>
+                                        <p>Using .css files to style
+                                        components and pages is very
+                                        common in web development. The
+                                        Mozilla Developer Network has a
+                                        very good <a
+                                        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">introductory
+                                        tutorial</a> on CSS if you
+                                        aren’t already familiar with it.
+                                        Google also has a <a
+                                        href="https://web.dev/learn/css/">comprehensive
+                                        tutorial</a>.</p>
+                                        <p>At its core, a css stylesheet
+                                        is a language for
+                                        pattern-matching on DOM tree
+                                        structure combined with a set of
+                                        rules that should be applied to
+                                        matching elements.</p>
+                                        <p>With this css:
+                                        <!-- $MDX skip --></p>
+                                        <div class="sourceCode"
+                                        id="cb1"><pre
+                                        class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>table {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-collapse</span>: <span class="dv">collapse</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>table td {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span>: <span class="dv">4</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>table thead {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="cn">brown</span><span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">antiquewhite</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-weight</span>: <span class="dv">bold</span><span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>table tr {</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="cn">antiquewhite</span><span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>table tr<span class="in">:nth-child(even)</span> {</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="cn">wheat</span><span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+                                        <p>And some basic table code, we
+                                        get a pretty table!</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/css_examples.ml,part=politician_table -->
+                                        <div class="sourceCode"
+                                        id="cb2"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> row =</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  { id : <span class="dt">int</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  ; name : <span class="dt">string</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  ; age : <span class="dt">int</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> basic_table rows =</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="kw">open</span> Vdom.Node <span class="kw">in</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> thead = thead [ td [ text <span class="st">&quot;id&quot;</span> ]; td [ text <span class="st">&quot;name&quot;</span> ]; td [ text <span class="st">&quot;age&quot;</span> ] ] <span class="kw">in</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> tbody =</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    rows</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    |&gt; <span class="dt">List</span>.map ~f:(<span class="kw">fun</span> { id; name; age } -&gt;</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      tr [ td [ textf <span class="st">&quot;%d&quot;</span> id ]; td [ text name ]; td [ textf <span class="st">&quot;%d&quot;</span> age ] ])</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    |&gt; tbody</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  table [ thead; tbody ]</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> politicians =</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  basic_table</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    [ { id = <span class="dv">0</span>; name = <span class="st">&quot;George Washington&quot;</span>; age = <span class="dv">67</span> }</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    ; { id = <span class="dv">1</span>; name = <span class="st">&quot;Alexander Hamilton&quot;</span>; age = <span class="dv">47</span> }</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    ; { id = <span class="dv">2</span>; name = <span class="st">&quot;Abraham Lincoln&quot;</span>; age = <span class="dv">56</span> }</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#politician-table">
+                                        </iframe>
+                                        <p>By keeping the styling logic
+                                        and vdom-node production
+                                        separate, our css can be quite
+                                        high-level. Sadly, the “high
+                                        level description” of the
+                                        pattern for this table might be
+                                        more broad than we had hoped;
+                                        this css will style
+                                        <em>every</em> table in our
+                                        application, even those created
+                                        by other components that you
+                                        might not own!</p>
+                                        <p>A common fix for this problem
+                                        is to make the patterns more
+                                        specific by adding a unique
+                                        class name targeting just the
+                                        tables that we want. For
+                                        example:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb3"><pre
+                                        class="sourceCode diff"><code class="sourceCode diff"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="st">- table {</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ table.politicians {</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    border-collapse: collapse;</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="st">- table td {</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="va">+ table.politicians td {</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    padding: 4px;</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="st">- table thead {</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="va">+ table.politicians thead {</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    text-align: center;</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    background: brown;</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    color: antiquewhite;</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    font-weight: bold;</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="st">- table tr {</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="va">+ table.politicians tr {</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    background: antiquewhite;</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="st">- table tr:nth-child(even) {</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="va">+ table.politicians tr:nth-child(even) {</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    background: wheat;</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+                                        <p>and then in the table
+                                        production code,</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb4"><pre
+                                        class="sourceCode diff"><code class="sourceCode diff"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="st">- table [ thead; tbody ]</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ table ~attr:(Vdom.Attr.class_ &quot;politician&quot;) [ thead; tbody ]</span></span></code></pre></div>
+                                        <p>This solves the issue of our
+                                        styles inadvertantly
+                                        obliterating other people’s
+                                        components, but comes at the
+                                        cost of verbosity. It also isn’t
+                                        completely foolproof: if two
+                                        people pick the same identifier
+                                        (in this case we went with
+                                        <code>politician</code>), then
+                                        the clash would still occur.
+                                        This leads to people using very
+                                        long and descriptive identifiers
+                                        to reduce the odds of a
+                                        collision.</p>
+                                        <p>Another downside is that if
+                                        you’re an application author
+                                        pulling in a UI component which
+                                        has a stylesheet, then you need
+                                        to somehow get that css file
+                                        into your application. Typically
+                                        this is done by writing a dune
+                                        rule that concatenates your
+                                        application’s stylesheet with
+                                        the stylesheets of any
+                                        dependencies, like so:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb5"><pre
+                                        class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(rule (</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  (targets (style.css))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  (deps    (%{root}/lib/dygraph/dist/dygraph.css ./my_styles.css))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  (action <span class="st">&quot;cat %{deps} &gt; %{target}&quot;</span>)))</span></code></pre></div>
+                                        <p>If a component requires a
+                                        stylesheet, there is no way of
+                                        knowing that fact (other than by
+                                        reading the readmes, but who
+                                        does that?).</p>
+                                        <p><strong>Pros</strong></p>
+                                        <ol type="1">
+                                        <li>Full access to CSS language
+                                        including pseudoselectors (like
+                                        <code>:nth-child(even)</code>,
+                                        or <code>:hover</code>)</li>
+                                        <li>Good debugging support in
+                                        Chrome Devtools</li>
+                                        </ol>
+                                        <p><strong>Cons</strong></p>
+                                        <ol type="1">
+                                        <li>Identifier collisions can
+                                        break things in subtle ways</li>
+                                        <li>Reusable components that
+                                        rely on a css stylesheet force
+                                        the application author to use
+                                        css files and to build out the
+                                        dune rule for concatenating all
+                                        of their dependencies’ css.</li>
+                                        </ol>
+                                        <h1
+                                        id="vdom.attr.style">Vdom.Attr.style</h1>
+                                        <p>Another way to add styling to
+                                        DOM nodes is through an
+                                        individual DOM node’s
+                                        <code>style</code> property.
+                                        <code>Vdom.Attr.style</code> has
+                                        this type signature:
+                                        <code>Css_gen.t -&gt; Vdom.Attr.t</code>,
+                                        so we’ll be primarily looking at
+                                        the <code>Css_gen</code>.</p>
+                                        <p>A <code>Css_gen.t</code> is a
+                                        collection of key-value pairs of
+                                        css properties and their values.
+                                        As an example,</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb6"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> style: Css_gen.t = Css_gen.text_align `Center</span></code></pre></div>
+                                        <p>is a style that only contains
+                                        the kv-pair
+                                        <code>text-align: center;</code>.
+                                        Meanwhile,</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb7"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> style: Css_gen.t =</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="kw">open</span> Css_gen <span class="kw">in</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  text_align `Center @&gt; background_color (`Name <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+                                        <p>makes use of the
+                                        <code>@&gt;</code> operator in
+                                        order to merge two
+                                        <code>Css_gen.t</code>’s,
+                                        producing kv-pairs which contain
+                                        <code>text-align: center; background: red;</code>.</p>
+                                        <p>If we ported the table
+                                        example to use the inline style
+                                        attribute, our code would now
+                                        look like this:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/css_examples.ml,part=attr_table -->
+                                        <div class="sourceCode"
+                                        id="cb8"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> row2 =</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  { id : <span class="dt">int</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  ; name : <span class="dt">string</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  ; age : <span class="dt">int</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> table_styles =</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="kw">open</span> Css_gen <span class="kw">in</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  border_collapse `Collapse</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  @&gt; border ~style:`Solid ~color:(`Name <span class="st">&quot;brown&quot;</span>) ~width:(`Px <span class="dv">1</span>) ()</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> thead_styles =</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="kw">open</span> Css_gen <span class="kw">in</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  text_align `Center</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  @&gt; background_color (`Name <span class="st">&quot;brown&quot;</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  @&gt; color (`Name <span class="st">&quot;antiquewhite&quot;</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  @&gt; font_weight `Bold</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> tr_odd = Css_gen.background_color (`Name <span class="st">&quot;antiquewhite&quot;</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> tr_even = Css_gen.background_color (`Name <span class="st">&quot;wheat&quot;</span>)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> td_styles =</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  Css_gen.padding ~top:(`Px <span class="dv">4</span>) ~bottom:(`Px <span class="dv">4</span>) ~left:(`Px <span class="dv">4</span>) ~right:(`Px <span class="dv">4</span>) ()</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> basic_table_attr rows =</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="kw">open</span> Vdom.Node <span class="kw">in</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> thead =</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    thead</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>      ~attr:(Vdom.Attr.style thead_styles)</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>      [ td [ text <span class="st">&quot;id&quot;</span> ]; td [ text <span class="st">&quot;name&quot;</span> ]; td [ text <span class="st">&quot;age&quot;</span> ] ]</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> tbody =</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    rows</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    |&gt; <span class="dt">List</span>.mapi ~f:(<span class="kw">fun</span> i { id; name; age } -&gt;</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> tr_style = <span class="kw">if</span> Int.( % ) i <span class="dv">2</span> = <span class="dv">0</span> <span class="kw">then</span> tr_even <span class="kw">else</span> tr_odd <span class="kw">in</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>      tr</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>        ~attr:(Vdom.Attr.style tr_style)</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>        [ td ~attr:(Vdom.Attr.style td_styles) [ textf <span class="st">&quot;%d&quot;</span> id ]</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>        ; td ~attr:(Vdom.Attr.style td_styles) [ text name ]</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>        ; td ~attr:(Vdom.Attr.style td_styles) [ textf <span class="st">&quot;%d&quot;</span> age ]</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>        ])</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    |&gt; tbody</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>  table ~attr:(Vdom.Attr.style table_styles) [ thead; tbody ]</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> politicians =</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>  basic_table_attr</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>    [ { id = <span class="dv">0</span>; name = <span class="st">&quot;George Washington&quot;</span>; age = <span class="dv">67</span> }</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>    ; { id = <span class="dv">1</span>; name = <span class="st">&quot;Alexander Hamilton&quot;</span>; age = <span class="dv">47</span> }</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>    ; { id = <span class="dv">2</span>; name = <span class="st">&quot;Abraham Lincoln&quot;</span>; age = <span class="dv">56</span> }</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>Because we’re no longer using
+                                        a css file, the first part of
+                                        the file re-defines all of the
+                                        styling in OCaml using
+                                        <code>Css_gen</code>. However,
+                                        these styles are not applied
+                                        automatically, so we also need
+                                        to add calls to
+                                        <code>Vdom.Attr.style</code>
+                                        everywhere.</p>
+                                        <p>In a particularly egregious
+                                        case, we changed from using
+                                        <code>List.map</code> to
+                                        <code>List.mapi</code>, which
+                                        allowed us to check if the row
+                                        is even or odd, something that
+                                        was previously done for us by
+                                        our stylesheet. This brings us
+                                        to our first major drawback of
+                                        using inline style attributes:
+                                        pseudo-selectors are
+                                        unavailable. Some of these, like
+                                        <code>:nth-child</code>, are
+                                        implementable in our
+                                        view-calculation logic because
+                                        we’re manually constructing the
+                                        lists anyway. However, other
+                                        pseudo-selectors like
+                                        <code>:hover</code> or
+                                        <code>:focus</code> are
+                                        impossible, and others, like
+                                        <code>:nth-of-type</code> are
+                                        possible, but hair-pullingly
+                                        annoying.</p>
+                                        <p><strong>Pros</strong></p>
+                                        <ol type="1">
+                                        <li>No need to worry about
+                                        identifier clashes because
+                                        styles are stuck directly on the
+                                        nodes themselves.</li>
+                                        <li>If used in a library, the
+                                        styles come with the library
+                                        instead of being another css
+                                        file that library users need to
+                                        know about and manage.</li>
+                                        </ol>
+                                        <p><strong>Cons</strong></p>
+                                        <ol type="1">
+                                        <li>Much more verbose.</li>
+                                        <li>Many css-attributes are
+                                        missing from the
+                                        <code>Css_gen</code> library
+                                        (you can work around this with
+                                        <code>Css_gen.create</code>).</li>
+                                        <li>Pseudo-selectors just aren’t
+                                        available.</li>
+                                        </ol>
+                                        <h1 id="css-ppx">CSS Ppx</h1>
+                                        <p>The third option is to use a
+                                        brand new ppx:
+                                        <code>ppx_css</code>! With this
+                                        ppx, you can write css code in
+                                        your .ml files, and it will be
+                                        loaded into the document at
+                                        page-load. To use the ppx, add
+                                        it to your jbuild like so:</p>
+                                        <div class="sourceCode"
+                                        id="cb9"><pre
+                                        class="sourceCode diff"><code class="sourceCode diff"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a> (executables (</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>   (names (main))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>   (libraries (bonsai_web))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="va">+  (preprocess (pps (ppx_jane ppx_css)))</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>   (js_of_ocaml ())))</span></code></pre></div>
+                                        <p>And now you can bind a module
+                                        to the result of a css ppx
+                                        invocation:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/css_examples.ml,part=inline_css -->
+                                        <div class="sourceCode"
+                                        id="cb10"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> Style =</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  [%css</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    stylesheet</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>      {|</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>table.politicians {</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  border-collapse: collapse;</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  border: <span class="dv">1</span>px solid brown;</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>table.politicians td {</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  padding: <span class="dv">4</span>px;</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>table.politicians thead {</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  text-align: center;</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  background: brown;</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  color: antiquewhite;</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  font-weight: bold;</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>table.politicians tr {</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  background: antiquewhite;</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>table.politicians tr:nth-child(even) {</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  background: wheat;</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    |}]</span></code></pre></div>
+                                        <p>This is the exact same css
+                                        from the second example! Notice
+                                        that it still has a
+                                        “politicians” class before every
+                                        rule. With this new
+                                        <code>Style</code> module bound,
+                                        we can <em>almost</em> keep the
+                                        same ocaml view generation as we
+                                        had originally:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/css_examples.ml,part=table_with_ppx_css -->
+                                        <div class="sourceCode"
+                                        id="cb11"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> table_with_ppx_css rows =</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="kw">open</span> Vdom.Node <span class="kw">in</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> thead = thead [ td [ text <span class="st">&quot;id&quot;</span> ]; td [ text <span class="st">&quot;name&quot;</span> ]; td [ text <span class="st">&quot;age&quot;</span> ] ] <span class="kw">in</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> tbody =</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    rows</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    |&gt; <span class="dt">List</span>.map ~f:(<span class="kw">fun</span> { id; name; age } -&gt;</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>      tr [ td [ textf <span class="st">&quot;%d&quot;</span> id ]; td [ text name ]; td [ textf <span class="st">&quot;%d&quot;</span> age ] ])</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    |&gt; tbody</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  table ~attr:(Vdom.Attr.class_ Style.politicians) [ thead; tbody ]</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>The only difference between
+                                        this function and the first one
+                                        we wrote is this:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb12"><pre
+                                        class="sourceCode diff"><code class="sourceCode diff"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="st">- table ~attr:(Vdom.Attr.class_ &quot;politicians&quot;) [ thead; tbody ]</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ table ~attr:(Vdom.Attr.class_ Style.politicians) [ thead; tbody ]</span></span></code></pre></div>
+                                        <p>This
+                                        <code>Style.politicians</code>
+                                        value was generated by the ppx
+                                        because it noticed that we were
+                                        using it as a class-name. The
+                                        ppx will also uniquify all of
+                                        the class names and ids that it
+                                        finds in the stylesheet. As an
+                                        example, the first rule’s
+                                        selector will become
+                                        <code>table.politicians_hash_e82ee99238</code>,
+                                        where the unique name is
+                                        generated by hashing the
+                                        contents of the css string as
+                                        well as the path to the file
+                                        containing the ppx. This means
+                                        that
+                                        <code>Style.politicians</code>
+                                        is a string with the value
+                                        <code>politicians_hash_e82ee99238</code>,
+                                        which we use for the
+                                        classname.</p>
+                                        <p>This kind of identifier
+                                        hashing is useful because it
+                                        means that component authors
+                                        don’t need to worry about
+                                        collisions.</p>
+                                        <h1 id="rewrite-flag">[~rewrite]
+                                        flag</h1>
+                                        <p>Sometimes, like when
+                                        interacting with customization
+                                        APIs that require specific
+                                        classnames for CSS
+                                        customization, ppx_css’s hygenic
+                                        identifier hashing could get in
+                                        your way. With [~rewrite], you
+                                        get to choose the name for an
+                                        identifier rather than ppx_css
+                                        choosing - or rather hashing -
+                                        it for you.</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb13"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">(* A table library&#39;s customization API _needs_ users to style the &quot;table-header&quot; class. *)</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>stylesheet {|.table-header {...}|}</span></code></pre></div>
+                                        <p>You can disable hashing when
+                                        needed by using the optional
+                                        <code>~rewrite</code>
+                                        parameter.</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb14"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">(* Scenario: A table library&#39;s customization API _needs_ users to style the &quot;table-header&quot; class. *)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>stylesheet ~rewrite:[<span class="st">&quot;table-header&quot;</span>, <span class="st">&quot;table-header&quot;</span>] {|.table-header {...}|}</span></code></pre></div>
+                                        <p>The above segment will
+                                        “rewrite”
+                                        <code>table-header</code> into
+                                        <code>table-header</code>
+                                        overriding the default hashing
+                                        behavior.</p>
+                                        <p>Some other times, you might
+                                        still want hygenic hashing, but
+                                        need the same identifier to have
+                                        the same hash between two
+                                        specific [%css stylesheet]
+                                        invocations. Here are some
+                                        examples of the rewrite flag in
+                                        action:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb15"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>stylesheet ~rewrite:[ <span class="st">&quot;table-header&quot;</span>, <span class="st">&quot;table-header&quot;</span>; <span class="st">&quot;table_row&quot;</span>, <span class="st">&quot;table-row&quot;</span> ] {|...|} <span class="co">(* Rewrites multiple identifiers at once. *)</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>stylesheet ~rewrite:[ <span class="st">&quot;my_table&quot;</span>, My_table_component.table ] {|...|} <span class="co">(* References an identifier defined in another module *)</span> |xxx<span class="er">}]</span>;</span></code></pre></div>
+                                        <h1
+                                        id="theming-through-ppx-css">Theming
+                                        through PPX CSS</h1>
+                                        <p>One additional benefit is
+                                        that this ppx/inliner opens up
+                                        doors for allowing components to
+                                        be customized by their users.
+                                        The <code>Style</code> module
+                                        that the ppx derived actually
+                                        has this signature:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb16"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">sig</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">module</span> <span class="kw">type</span> S  = <span class="kw">sig</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">val</span> politicians : <span class="dt">string</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">end</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">type</span> t = (<span class="kw">module</span> S)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">val</span> default : t</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">val</span> politicians : <span class="dt">string</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
+                                        <p>While we were just using the
+                                        default <code>politicians</code>
+                                        value, the module type and a
+                                        default packed module
+                                        implementing that module type
+                                        are intended to be used for
+                                        making it easy for component
+                                        authors to allow their users to
+                                        theme the components.</p>
+                                        <p>By tweaking the code slightly
+                                        we can see how this is
+                                        possible:</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb17"><pre
+                                        class="sourceCode diff"><code class="sourceCode diff"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="st">- let table_with_ppx_css rows =</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ let table_with_ppx_css ?(theme=Style.default) rows =</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="va">+   let module Style = (val theme) in</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    let open Vdom.Node in</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    let thead =</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>      thead [ td [ text &quot;id&quot; ]; td [ text &quot;name&quot; ]; td [ text &quot;age&quot; ] ]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    in</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    let tbody =</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>      rows</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>      |&gt; List.map ~f:(fun { id; name; age } -&gt;</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>        tr</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>          [ td [ textf &quot;%d&quot; id ]; td [ text name ]; td [ textf &quot;%d&quot; age ] ])</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>      |&gt; tbody</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    in</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    table ~attr:(Vdom.Attr.class_ Style.politicians) [ thead; tbody ]</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>  ;;</span></code></pre></div>
+                                        <p>now someone could make a new
+                                        module which implements that
+                                        type:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/css_examples.ml,part=my_theme -->
+                                        <div class="sourceCode"
+                                        id="cb18"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> My_theme =</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  [%css</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    stylesheet</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>      {|</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>table.politicians {</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  border-collapse: collapse;</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  border: <span class="dv">1</span>px solid black;</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>table.politicians td {</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  padding: <span class="dv">4</span>px;</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>table.politicians thead {</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>  text-align: center;</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  background: black;</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>  color: white;</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>  font-weight: bold;</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>table.politicians td {</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>  border: <span class="dv">1</span>px solid black;</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>    |}]</span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> table =</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>  themeable_table</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>    ~theme:(<span class="kw">module</span> My_theme)</span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>    [ { id = <span class="dv">0</span>; name = <span class="st">&quot;George Washington&quot;</span>; age = <span class="dv">67</span> }</span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>    ; { id = <span class="dv">1</span>; name = <span class="st">&quot;Alexander Hamilton&quot;</span>; age = <span class="dv">47</span> }</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    ; { id = <span class="dv">2</span>; name = <span class="st">&quot;Abraham Lincoln&quot;</span>; age = <span class="dv">56</span> }</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#themeable-table">
+                                        </iframe>
+                                        <p>Due to the nature of the
+                                        generated code, there are a few
+                                        restrictions on the person
+                                        building a custom theme:</p>
+                                        <ol type="1">
+                                        <li>No new identifiers are
+                                        allowed. This means that if a
+                                        component author uses a dumb
+                                        name like “politicians”, then a
+                                        theme author needs to as
+                                        well.</li>
+                                        <li><em>All</em> identifiers
+                                        present in the component
+                                        definition must be used. You can
+                                        use an empty rule like
+                                        <code>.politicians {}</code> in
+                                        order to meet this requirement
+                                        if you wanted to avoid themeing
+                                        something.</li>
+                                        </ol>
+                                        <p>These restrictions may seem
+                                        onerous, but it’s a lot like
+                                        using a record in OCaml: the
+                                        author of the record gets to
+                                        decide what the names of the
+                                        fields are, and if someone wants
+                                        to construct a value of that
+                                        record, they can’t just leave
+                                        out the fields that they don’t
+                                        care about. This means that
+                                        component authors should think
+                                        ahead and ask themselves “what
+                                        kind of customizability will
+                                        users of this component want?”
+                                        before settling on a set of
+                                        identifiers and picking which
+                                        nodes they’re attached to.</p>
+                                        <p>There are (plans for) other
+                                        kinds of ppx transformations
+                                        other than just the identifier
+                                        re-writing, such as
+                                        automatically introducing the
+                                        namespacing classnames for you.
+                                        Those aren’t here yet, but they
+                                        might be soon.</p>
+                                        <p>It should be noted that even
+                                        with the classname hashing, it’s
+                                        still possible to write rules
+                                        that affect more than you might
+                                        like. I actually included a
+                                        number of bugs of this form in
+                                        the examples so far (!).
+                                        <code>.table.politicians td</code>
+                                        affects <em>every</em> td inside
+                                        of the table, even tables within
+                                        tables. So if one of the cells
+                                        of this table contained another
+                                        table that was styled
+                                        differently, we’d run the risk
+                                        of overwriting it. The “correct”
+                                        rule in this case would be to
+                                        fully qualify the paths to the
+                                        elements, so
+                                        <code>table.politicians td</code>
+                                        would become
+                                        <code>table.politicians &gt; tbody &gt; tr &gt; td</code>.</p>
+                                        <p><strong>Pros</strong></p>
+                                        <ol type="1">
+                                        <li>Full access to CSS language
+                                        including pseudoselectors (like
+                                        <code>:nth-child(even)</code>,
+                                        or <code>:hover</code>)</li>
+                                        <li>Good debugging support in
+                                        Chrome Devtools</li>
+                                        <li>No need to worry about
+                                        identifier clashes because these
+                                        identifiers are hashed before
+                                        being used.</li>
+                                        <li>If used in a library, the
+                                        styles come with the library
+                                        instead of being another css
+                                        file that library users need to
+                                        know about and manage.</li>
+                                        </ol>
+                                        <p><strong>Cons</strong></p>
+                                        <ol type="1">
+                                        <li>It’s still up to you to make
+                                        sure that styles aren’t too
+                                        general (this is going to be
+                                        addresed in further releases of
+                                        the ppx.</li>
+                                        </ol>
+                                    </div>
+            </div>
+        </div>
+        <!-- <script src="https://vjs.zencdn.net/5.4.4/video.js"></script> -->
+
+    </body>
+</html>

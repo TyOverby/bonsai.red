@@ -1,0 +1,606 @@
+<!doctype html>
+<html >
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" /> -->
+
+        <!-- <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" /> -->
+
+        <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+
+        <!-- <script src="script.js"></script> -->
+
+        <!-- <script src="jquery.sticky-kit.js "></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/ryangrose/easy-pandoc-templates@948e28e5/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script> -->
+        <!-- <meta name="generator" content="pandoc" /> -->
+                        <title>  edge triggering</title>
+                        <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #eceff4;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #88c0d0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #a3be8c; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #bf616a; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #a3be8c; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #88c0d0; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #88c0d0; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #a3be8c; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #a3be8c; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #88c0d0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #bf616a; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #a3be8c; } /* SpecialChar */
+code span.ss { color: #a3be8c; } /* SpecialString */
+code span.st { color: #a3be8c; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #a3be8c; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+        </style>
+                                    </head>
+    <body>
+
+
+                <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span class="doc-title">
+                        <span id="bonsai">bonsai</span> 
+                        <span id="slash"> / </span> 
+                         edge triggering
+                    </span>
+                    <ul class="nav pull-right doc-info">
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="container">
+            <div class="row">
+                <div class="toc_and_chapters">
+                                        <div id="TOC" class="span3">
+                        <h3> This chapter</h3>
+                        <div class="well toc">
+
+                            <ul>
+                            <li><a href="#after_display"
+                            id="toc-after_display"><code>after_display</code></a></li>
+                            <li><a href="#on_activate-on_deactivate"
+                            id="toc-on_activate-on_deactivate"><code>on_activate</code>
+                            / <code>on_deactivate</code></a></li>
+                            <li><a href="#on_change"
+                            id="toc-on_change"><code>on_change</code></a></li>
+                            <li><a
+                            href="#implications-for-intelligibility-and-testing"
+                            id="toc-implications-for-intelligibility-and-testing">Implications
+                            for intelligibility and testing</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                                        <div id="chapters" class="span3">
+                        <h3> All chapters </h3>
+                        <ul>
+                        <li><a href="./00-introduction.html">  introduction </a></li>
+                        <li><a href="./01-virtual_dom.html">  virtual_dom </a></li>
+                        <li><a href="./02-dynamism.html">  dynamism </a></li>
+                        <li><a href="./03-state.html">  state </a></li>
+                        <li><a href="./04-forms.html">  forms </a></li>
+                        <li><a href="./05-effect.html">  effect </a></li>
+                        <li><a href="./07-flow.html">  flow </a></li>
+                        <li><a href="./08-css.html">  css </a></li>
+                        <li><a href="./09-edge-triggering.html">  edge triggering </a></li>
+                        </ul>                    </div>
+                </div>
+                <div class="span9">
+                                        <p>Bonsai encourages declarative
+                                        UI construction. A computation
+                                        is defined as a list of
+                                        dependencies and a function
+                                        which reads the current value of
+                                        those dependencies, producing a
+                                        new value. A computation defined
+                                        in this way doesn’t care what
+                                        the previous values of its
+                                        dependencies were; it always
+                                        operates on their current
+                                        value.</p>
+                                        <p>However, sometimes it can be
+                                        helpful to witness a transition
+                                        from one value to another. In
+                                        Bonsai, we have the <a
+                                        href="https://ocaml.org/p/bonsai/v0.15.0/doc/Bonsai/Edge/index.html"><code>Bonsai.Edge</code></a>
+                                        module, which has a collection
+                                        of functions which can notice
+                                        things like</p>
+                                        <ol type="1">
+                                        <li>the passage of time</li>
+                                        <li>the activation and
+                                        deactivation of components</li>
+                                        <li>changing of the contents of
+                                        a Value.t</li>
+                                        </ol>
+                                        <p>and schedule Effects when
+                                        they occur.</p>
+                                        <h2
+                                        id="after_display"><code>after_display</code></h2>
+                                        <p>The main <code>Edge</code>
+                                        function we’ll take a look at is
+                                        <code>Bonsai.Edge.lifecycle</code>,
+                                        which takes a number of optional
+                                        parameters of type
+                                        <code>unit Effect.t Value.t</code>.
+                                        The first of these is
+                                        <code>after_display</code>.
+                                        <code>Edge.lifecycle</code>
+                                        schedules the effect passed in
+                                        via <code>after_display</code>
+                                        as the last operation in the
+                                        Bonsai render-loop, right after
+                                        the DOM has been updated.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/edge_examples.ml,part=after_display -->
+                                        <div class="sourceCode"
+                                        id="cb1"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> frame_counter =</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub frames, set_frames = Bonsai.state (<span class="kw">module</span> Int) ~default_model:<span class="dv">0</span> <span class="kw">in</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub () =</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    Bonsai.Edge.lifecycle</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      ~after_display:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        (<span class="kw">let</span>%map frames = frames</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>         <span class="kw">and</span> set_frames = set_frames <span class="kw">in</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>         set_frames (frames + <span class="dv">1</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      ()</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr frames = frames <span class="kw">in</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.textf <span class="st">&quot;this component has been alive for %d frames&quot;</span> frames</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#after-display">
+                                        </iframe>
+                                        <p>The text I chose for that
+                                        component was very intentional.
+                                        I wrote “this component has been
+                                        alive for {n} frames” instead of
+                                        “the application has been
+                                        running for {n} frames”. This is
+                                        because Edge functions only run
+                                        if their computation is active.
+                                        Let’s start with a demo, and
+                                        then discuss what “active”
+                                        means.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/edge_examples.ml,part=only_when_active -->
+                                        <div class="sourceCode"
+                                        id="cb2"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> frame_toggler =</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub showing, set_showing = Bonsai.state (<span class="kw">module</span> Bool) ~default_model:<span class="kw">false</span> <span class="kw">in</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub <span class="dt">output</span> =</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">match</span>%sub showing <span class="kw">with</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    | <span class="kw">true</span> -&gt; frame_counter</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    | <span class="kw">false</span> -&gt; Bonsai.const Vdom.Node.none</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr showing = showing</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> set_showing = set_showing</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> <span class="dt">output</span> = <span class="dt">output</span> <span class="kw">in</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> toggle_showing = set_showing (<span class="dt">not</span> showing) <span class="kw">in</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> button_text = <span class="kw">if</span> showing <span class="kw">then</span> <span class="st">&quot;disable counter&quot;</span> <span class="kw">else</span> <span class="st">&quot;enable counter&quot;</span> <span class="kw">in</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> toggle_button =</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.button</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; toggle_showing))</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      [ Vdom.Node.text button_text ]</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div [ toggle_button; <span class="dt">output</span> ]</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#only-when-active">
+                                        </iframe>
+                                        <p>If you disable the component
+                                        (wait a few seconds), you’ll
+                                        notice that the counter picks up
+                                        where it left off rather than
+                                        continuing in the
+                                        background.</p>
+                                        <p>As mentioned earlier,
+                                        <code>after_display</code> only
+                                        runs when the computation is
+                                        “active”, and as this example
+                                        demonstrates, being inside of a
+                                        <code>match%sub</code> is one
+                                        way to change the activity
+                                        status of a computation.</p>
+                                        <p>In fact, aside from
+                                        <code>match%sub</code>, there’s
+                                        only one other combinator that
+                                        influences the active status:
+                                        <code>Bonsai.assoc</code>.</p>
+                                        <aside>
+                                        <p>Technically,
+                                        <code>if%sub</code> and
+                                        <code>Bonsai.enum_</code> also
+                                        have this property, but in
+                                        reality, <code>if%sub</code> and
+                                        <code>match%sub</code> are
+                                        implemented in terms of
+                                        <code>enum_</code>, so they’re
+                                        all counted together.</p>
+                                        </aside>
+                                        <p><code>Bonsai.assoc</code> is
+                                        used to build a dynamic number
+                                        of instances of a
+                                        computation.</p>
+                                        <p>Just like how</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb3"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span>%sub a = my_component <span class="kw">in</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span>%sub b = my_component <span class="kw">in</span></span></code></pre></div>
+                                        <p>will create two
+                                        <em>distinct</em> instances of
+                                        <code>my_component</code>, each
+                                        with their own state,
+                                        <code>Bonsai.assoc</code> can
+                                        instantiate a dynamic number of
+                                        computations, one instantiation
+                                        per key-value pair from an
+                                        incoming
+                                        <code>_ Map.t Value.t</code>.</p>
+                                        <p>I have a small library, <a
+                                        href="https://ocaml.org/p/bonsai/v0.15.0/doc/Bonsai_web_ui_extendy/index.html">Bonsai_web_ui_extendy</a>,
+                                        which uses <code>assoc</code> to
+                                        implement a component for easily
+                                        creating and deleting instances
+                                        of another component.</p>
+                                        <p>We’ll reuse the
+                                        <code>frame_counter</code>
+                                        component built in the first
+                                        example, and combine it with
+                                        <code>extendy</code> to get
+                                        multiple
+                                        <code>frame_counter</code>s.</p>
+                                        <p>Let’s see it in use:
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/edge_examples.ml,part=extendy-use --></p>
+                                        <div class="sourceCode"
+                                        id="cb4"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> wrap_remove frame_counter remove =</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> x_button =</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.button ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; remove)) [ Vdom.Node.text <span class="st">&quot;x&quot;</span> ]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div [ x_button; frame_counter ]</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> many_frame_watches =</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub { contents; append; _ } = extendy frame_counter ~wrap_remove <span class="kw">in</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr contents = contents</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> append = append <span class="kw">in</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> append_button =</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    Vdom.Node.button ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; append)) [ Vdom.Node.text <span class="st">&quot;add&quot;</span> ]</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div (append_button :: <span class="dt">Map</span>.data contents)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#extendy-use">
+                                        </iframe>
+                                        <p>By clicking on the “add”
+                                        button, we create multiple
+                                        frame-counters, each with their
+                                        own state, each which began
+                                        counting at the moment of their
+                                        creation. It might not be
+                                        obvious, but clicking on the
+                                        <code>x</code> button not only
+                                        removes the component from the
+                                        view, but from the entire Bonsai
+                                        computation graph, so the
+                                        <code>on_display</code> effect
+                                        is also stopped entirely.</p>
+                                        <h2
+                                        id="on_activate-on_deactivate"><code>on_activate</code>
+                                        /
+                                        <code>on_deactivate</code></h2>
+                                        <p>The other two optional
+                                        parameters to
+                                        <code>Bonsai.Edge.lifecycle</code>
+                                        are <code>on_activate</code> and
+                                        <code>on_deactivate</code>, both
+                                        of which share the same type as
+                                        <code>after_display</code>:
+                                        <code>unit Effect.t Value.t</code>.
+                                        These effects are run whenever
+                                        the lifecycle computation
+                                        becomes active or inactive.</p>
+                                        <aside>
+                                        <p>By incorporating a
+                                        <code>lifecycle</code>
+                                        computation into a component of
+                                        yours, the
+                                        <code>on_activate</code> /
+                                        <code>on_deactivate</code>
+                                        callbacks are effectively
+                                        measuring the
+                                        activation/deactivation of the
+                                        containing component.</p>
+                                        </aside>
+                                        <p>Let’s modify the lifecycle
+                                        component to use these new
+                                        functions. First, though, we’ll
+                                        want to do something when the
+                                        activation/deactivation occurs.
+                                        For that, I built a tiny logging
+                                        component which will let me
+                                        append a list of strings sent by
+                                        the <code>frame_counter</code>
+                                        component.</p>
+                                        <p>Ok, on to the extension of
+                                        <code>frame_counter</code>:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/edge_examples.ml,part=activations -->
+                                        <div class="sourceCode"
+                                        id="cb5"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> frame_counter (<span class="dt">log</span> : (<span class="dt">string</span> -&gt; <span class="dt">unit</span> Ui_effect.t) Value.t) =</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub frames, set_frames = Bonsai.state (<span class="kw">module</span> Int) ~default_model:<span class="dv">0</span> <span class="kw">in</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub () =</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    Bonsai.Edge.lifecycle</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>      ~on_activate:</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        (<span class="kw">let</span>%map <span class="dt">log</span> = <span class="dt">log</span> <span class="kw">in</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>         <span class="dt">log</span> <span class="st">&quot;🚀&quot;</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      ~on_deactivate:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        (<span class="kw">let</span>%map <span class="dt">log</span> = <span class="dt">log</span> <span class="kw">in</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>         <span class="dt">log</span> <span class="st">&quot;🔥&quot;</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      ~after_display:</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        (<span class="kw">let</span>%map frames = frames</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>         <span class="kw">and</span> set_frames = set_frames <span class="kw">in</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>         set_frames (frames + <span class="dv">1</span>))</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      ()</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr frames = frames <span class="kw">in</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.textf <span class="st">&quot;this component has been alive for %d frames&quot;</span> frames</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#extendy-use-2">
+                                        </iframe>
+                                        <aside>
+                                        <p>If you don’t like the look
+                                        of</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb6"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span>%map <span class="dt">log</span> = <span class="dt">log</span> <span class="kw">in</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">log</span> <span class="st">&quot;🔥&quot;</span></span></code></pre></div>
+                                        <p>you could also write it
+                                        as</p>
+                                        <!-- $MDX skip -->
+                                        <div class="sourceCode"
+                                        id="cb7"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">log</span> &gt;&gt;| Fn.( |&gt; ) <span class="st">&quot;🔥&quot;</span></span></code></pre></div>
+                                        <p><br/></p>
+                                        <aside>
+                                        <p>Please don’t though</p>
+                                        </aside>
+                                        </aside>
+                                        <h2
+                                        id="on_change"><code>on_change</code></h2>
+                                        <p>With the
+                                        <code>lifecycle</code> function
+                                        as a primitive, we can implement
+                                        other useful edge-triggering
+                                        functions. One of these is also
+                                        included in the
+                                        <code>Bonsai.Edge</code> module:
+                                        <code>on_change'</code>.</p>
+                                        <p><code>on_change'</code>
+                                        monitors a
+                                        <code>'a Value.t</code>, and
+                                        when that value changes, it
+                                        calls a user-provided function,
+                                        giving that function both the
+                                        previous and current value. This
+                                        user-provided function returns
+                                        an <code>Effect.t</code>, which
+                                        will be scheduled whenever the
+                                        value changes.</p>
+                                        <aside>
+                                        <p>You currently have all the
+                                        tools to implement
+                                        <code>on_change'</code>
+                                        yourself, and you can find the
+                                        implementation <a
+                                        href="https://github.com/janestreet/bonsai/blob/master/src/proc.ml#L832">here</a>.</p>
+                                        </aside>
+                                        <p>Combining the
+                                        counter-component from <a
+                                        href="./03-state.html">Chapter
+                                        3</a> and the logging component
+                                        that I used above, we can write
+                                        a component which contains both
+                                        a counter and a log, where the
+                                        log is updated when the value
+                                        changes.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/edge_examples.ml,part=logging_counter -->
+                                        <div class="sourceCode"
+                                        id="cb8"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> logging_counter =</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub log_view, <span class="dt">log</span> = logger <span class="kw">in</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub counter_view, counter = counter <span class="kw">in</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub () =</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> callback =</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span>%map <span class="dt">log</span> = <span class="dt">log</span> <span class="kw">in</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">fun</span> prev cur -&gt;</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">match</span> prev <span class="kw">with</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        | <span class="dt">None</span> -&gt; Ui_effect.Ignore</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        | <span class="dt">Some</span> prev -&gt; <span class="dt">log</span> (<span class="kw">if</span> prev &lt; cur <span class="kw">then</span> <span class="st">&quot;🚀&quot;</span> <span class="kw">else</span> <span class="st">&quot;🔥&quot;</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    Bonsai.Edge.on_change&#39; (<span class="kw">module</span> Int) counter ~callback</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr log_view = log_view</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> counter_view = counter_view <span class="kw">in</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div [ counter_view; log_view ]</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#logging-counter">
+                                        </iframe>
+                                        <h2
+                                        id="implications-for-intelligibility-and-testing">Implications
+                                        for intelligibility and
+                                        testing</h2>
+                                        <p>Declarative programs are easy
+                                        to reason about and test.
+                                        Extensive use of the
+                                        <code>Edge</code> module will
+                                        make your program less and less
+                                        declarative.</p>
+                                        <p>Every time that you have the
+                                        opportunity, you should opt for
+                                        using anything other than an
+                                        <code>Edge.*</code>
+                                        function.</p>
+                                        <p>However, sometimes it’s
+                                        necessary, and we have testing
+                                        helpers to make your life a bit
+                                        easier when you do use edge
+                                        triggering. Because
+                                        <code>after_display</code> runs
+                                        its effect, well, after the
+                                        display has occurred, how would
+                                        this interact with Bonsai
+                                        testing functions, like
+                                        <code>Handle.show</code>?</p>
+                                        <p>To demonstrate, we’ll build
+                                        an <em>awful</em> Bonsai
+                                        component: a linear chain of
+                                        <code>on_changes</code>:</p>
+                                        <!-- $MDX file=../../test/test_proc_bonsai.ml,part=chain-computation -->
+                                        <div class="sourceCode"
+                                        id="cb9"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> chain_computation =</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub a = Bonsai.const <span class="st">&quot;x&quot;</span> <span class="kw">in</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub b, set_b = Bonsai.state (<span class="kw">module</span> <span class="dt">String</span>) ~default_model:<span class="st">&quot; &quot;</span> <span class="kw">in</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub c, set_c = Bonsai.state (<span class="kw">module</span> <span class="dt">String</span>) ~default_model:<span class="st">&quot; &quot;</span> <span class="kw">in</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub d, set_d = Bonsai.state (<span class="kw">module</span> <span class="dt">String</span>) ~default_model:<span class="st">&quot; &quot;</span> <span class="kw">in</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub () = Bonsai.Edge.on_change (<span class="kw">module</span> <span class="dt">String</span>) a ~callback:set_b <span class="kw">in</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub () = Bonsai.Edge.on_change (<span class="kw">module</span> <span class="dt">String</span>) b ~callback:set_c <span class="kw">in</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub () = Bonsai.Edge.on_change (<span class="kw">module</span> <span class="dt">String</span>) c ~callback:set_d <span class="kw">in</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  return (Value.map4 a b c d ~f:(sprintf <span class="st">&quot;a:%s b:%s c:%s d:%s&quot;</span>))</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>Because
+                                        <code>on_change</code> triggers
+                                        at the end of each frame, it
+                                        should take 4 frames to settle.
+                                        And indeed, in a unit test,
+                                        that’s exactly what we’ll
+                                        see:</p>
+                                        <!-- $MDX file=../../test/test_proc_bonsai.ml,part=chained-on-change -->
+                                        <div class="sourceCode"
+                                        id="cb10"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span>%expect_test <span class="st">&quot;chained on_change&quot;</span> =</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> handle = Handle.create (Result_spec.<span class="dt">string</span> (<span class="kw">module</span> <span class="dt">String</span>)) chain_computation <span class="kw">in</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  Handle.show handle;</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  [%expect {| a:x b:  c:  d: |}];</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  Handle.show handle;</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  [%expect {| a:x b:x c:  d: |}];</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  Handle.show handle;</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  [%expect {| a:x b:x c:x d: |}];</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  Handle.show handle;</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  [%expect {| a:x b:x c:x d:x |}];</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  Handle.show handle;</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  [%expect {| a:x b:x c:x d:x |}]</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>But
+                                        <code>Bonsai_web_test.Handle</code>
+                                        has a function that makes this a
+                                        bit nicer:
+                                        <code>recompute_view_until_stable</code>,
+                                        so we can rewrite the test in a
+                                        way that skips all the
+                                        intermediate frames:</p>
+                                        <!-- $MDX file=../../test/test_proc_bonsai.ml,part=chained-on-change-recompute -->
+                                        <div class="sourceCode"
+                                        id="cb11"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span>%expect_test <span class="st">&quot;chained on_change with recompute_view_until_stable&quot;</span> =</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> handle = Handle.create (Result_spec.<span class="dt">string</span> (<span class="kw">module</span> <span class="dt">String</span>)) chain_computation <span class="kw">in</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  Handle.recompute_view_until_stable handle;</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  Handle.show handle;</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  [%expect {| a:x b:x c:x d:x |}]</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p><code>recompute_view_until_stable</code>
+                                        is handy, but it’s hiding
+                                        intermediate states. If those
+                                        intermediate states allow for
+                                        logical bugs in your
+                                        application, then you might miss
+                                        them. As mentioned above: avoid
+                                        <code>Edge</code> if you can;
+                                        it’s a <em>sharp</em> tool.</p>
+                                    </div>
+            </div>
+        </div>
+        <!-- <script src="https://vjs.zencdn.net/5.4.4/video.js"></script> -->
+
+    </body>
+</html>

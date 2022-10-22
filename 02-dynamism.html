@@ -1,0 +1,699 @@
+<!doctype html>
+<html >
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" /> -->
+
+        <!-- <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" /> -->
+
+        <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+
+        <!-- <script src="script.js"></script> -->
+
+        <!-- <script src="jquery.sticky-kit.js "></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script> -->
+        <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="https://cdn.jsdelivr.net/gh/ryangrose/easy-pandoc-templates@948e28e5/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" /> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script> -->
+        <!-- <meta name="generator" content="pandoc" /> -->
+                        <title>  dynamism</title>
+                        <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #eceff4;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #88c0d0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #a3be8c; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #bf616a; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #a3be8c; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #88c0d0; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #88c0d0; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #a3be8c; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #a3be8c; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #88c0d0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #bf616a; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #a3be8c; } /* SpecialChar */
+code span.ss { color: #a3be8c; } /* SpecialString */
+code span.st { color: #a3be8c; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #a3be8c; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+        </style>
+                                    </head>
+    <body>
+
+
+                <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span class="doc-title">
+                        <span id="bonsai">bonsai</span> 
+                        <span id="slash"> / </span> 
+                         dynamism
+                    </span>
+                    <ul class="nav pull-right doc-info">
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="container">
+            <div class="row">
+                <div class="toc_and_chapters">
+                                        <div id="TOC" class="span3">
+                        <h3> This chapter</h3>
+                        <div class="well toc">
+
+                            <ul>
+                            <li><a href="#values-and-computations"
+                            id="toc-values-and-computations">Values and
+                            computations</a></li>
+                            <li><a href="#the-scary-side-of-values"
+                            id="toc-the-scary-side-of-values">The scary
+                            side of values</a></li>
+                            <li><a href="#inputs-to-the-graph"
+                            id="toc-inputs-to-the-graph">Inputs to the
+                            graph</a></li>
+                            <li><a href="#bonsai-is-a-compiler"
+                            id="toc-bonsai-is-a-compiler">Bonsai is a
+                            compiler</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                                        <div id="chapters" class="span3">
+                        <h3> All chapters </h3>
+                        <ul>
+                        <li><a href="./00-introduction.html">  introduction </a></li>
+                        <li><a href="./01-virtual_dom.html">  virtual_dom </a></li>
+                        <li><a href="./02-dynamism.html">  dynamism </a></li>
+                        <li><a href="./03-state.html">  state </a></li>
+                        <li><a href="./04-forms.html">  forms </a></li>
+                        <li><a href="./05-effect.html">  effect </a></li>
+                        <li><a href="./07-flow.html">  flow </a></li>
+                        <li><a href="./08-css.html">  css </a></li>
+                        <li><a href="./09-edge-triggering.html">  edge triggering </a></li>
+                        </ul>                    </div>
+                </div>
+                <div class="span9">
+                                        <p>Dynamism is central to
+                                        engaging applications: as the
+                                        state of the world changes, so
+                                        should the UI.</p>
+                                        <p>The previous chapter
+                                        introduced an immutable view
+                                        type, <code>Vdom.Node.t</code>
+                                        along with the idea that the UI
+                                        is a function from data to view.
+                                        For large and dynamic input
+                                        data, this function is expensive
+                                        and must run quite often. To
+                                        keep up with quickly changing
+                                        data, we would like to only
+                                        re-compute the parts of the view
+                                        that depend on newly changed
+                                        data.</p>
+                                        <p>This chapter takes a detour
+                                        from the theme of computing web
+                                        UIs to investigate the core
+                                        Bonsai abstractions. It may be
+                                        surprising to know that Bonsai
+                                        isn’t specialized for user
+                                        interfaces; rather, it answers
+                                        the very generic question of how
+                                        to build composable incremental
+                                        state-machines. As it turns out,
+                                        incremental state-machines are a
+                                        great abstraction for building
+                                        UI!</p>
+                                        <aside>
+                                        <p>This chapter is more
+                                        complicated than we might like
+                                        due to a longstanding quirk of
+                                        Bonsai’s architecture. We’ll
+                                        begin by describing the more
+                                        ideal way to think about Bonsai,
+                                        and then we’ll explain why it
+                                        isn’t quite accurate.</p>
+                                        </aside>
+                                        <h1
+                                        id="values-and-computations">Values
+                                        and computations</h1>
+                                        <p>Bonsai is all about
+                                        constructing incremental state
+                                        machine graphs. A
+                                        <code>'a Value.t</code> is a
+                                        node in a graph that represents
+                                        a <code>'a</code> that changes
+                                        over time. A
+                                        <code>'a Computation.t</code> is
+                                        an entire graph that might
+                                        contain many
+                                        <code>Value.t</code> of
+                                        different types, but culminates
+                                        in a <code>'a Value.t</code>.
+                                        The motivation for having two
+                                        types will be thoroughly
+                                        explored later, but let us start
+                                        with something basic: building a
+                                        graph that computes a value that
+                                        depends on two other values.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/dynamism_examples.ml,part=juxtapose_part_1 -->
+                                        <div class="sourceCode"
+                                        id="cb1"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> juxtapose_digits ~(delimiter : <span class="dt">string</span>) (a : <span class="dt">int</span> Value.t) (b : <span class="dt">int</span> Value.t)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  : <span class="dt">string</span> Computation.t</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  =</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr a = a</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> b = b <span class="kw">in</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  Int.to_string a ^ delimiter ^ Int.to_string b</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>The two phrases
+                                        <code>a = a</code> and
+                                        <code>b = b</code> may look a
+                                        little silly, but they are
+                                        necessary. The expression on the
+                                        right-hand side of both bindings
+                                        in the <code>let%arr</code> has
+                                        type <code>int Value.t</code>,
+                                        but the pattern on the left hand
+                                        side is a plain old
+                                        <code>int</code> that we can
+                                        freely pass to
+                                        <code>Int.to_string</code>. So
+                                        <code>let%arr</code> is useful
+                                        for “unwrapping” the data inside
+                                        a <code>Value.t</code> so that
+                                        we can access it for a limited
+                                        scope.</p>
+                                        <p>The type of the entire
+                                        <code>let%arr</code> expression,
+                                        which includes the stuff on both
+                                        sides of <code>in</code>, is
+                                        <code>string Computation.t</code>
+                                        rather than
+                                        <code>string Value.t</code>.
+                                        This means that the result is a
+                                        graph and not a node in a graph.
+                                        To obtain the final node of a
+                                        <code>Computation.t</code>
+                                        graph, we can use a
+                                        <code>let%sub</code>
+                                        expression.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/dynamism_examples.ml,part=juxtapose_part_2 -->
+                                        <div class="sourceCode"
+                                        id="cb2"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> _juxtapose_and_sum (a : <span class="dt">int</span> Value.t) (b : <span class="dt">int</span> Value.t) : <span class="dt">string</span> Computation.t =</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub juxtaposed = juxtapose_digits ~delimiter:<span class="st">&quot; + &quot;</span> a b <span class="kw">in</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub sum =</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%arr a = a</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">and</span> b = b <span class="kw">in</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    Int.to_string (a + b)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr juxtaposed = juxtaposed</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> sum = sum <span class="kw">in</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  juxtaposed ^ <span class="st">&quot; = &quot;</span> ^ sum</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>We provide a computation and
+                                        <code>let%sub</code> provides a
+                                        name we can use to refer to the
+                                        result node of that computation.
+                                        In the first
+                                        <code>let%sub</code> above, the
+                                        computation is
+                                        <code>juxtapose_digits a b</code>
+                                        and the name is
+                                        <code>juxtaposed</code>. The
+                                        important thing about using
+                                        <code>let%sub</code> is that
+                                        <code>juxtaposed</code> has type
+                                        <code>string Value.t</code>, so
+                                        we can freely use it in
+                                        <code>let%arr</code>
+                                        expressions.</p>
+                                        <p>A subtle, yet extremely
+                                        important aspect of
+                                        <code>let%sub</code> is that it
+                                        makes a copy of the input
+                                        computation, and the node that
+                                        the name refers to is the result
+                                        node of that copy, rather than
+                                        of the original. This means that
+                                        if you use <code>let%sub</code>
+                                        twice on the same computation,
+                                        you get access to the result
+                                        nodes for two independent copies
+                                        of the same graph. All we’ve
+                                        encountered so far are pure
+                                        function computations
+                                        constructed with
+                                        <code>let%arr</code>, so having
+                                        multiple copies of a graph is
+                                        useless, since all the copies
+                                        will always be producing
+                                        identical results. The ability
+                                        to copy is useful when
+                                        computations contain internal
+                                        state.</p>
+                                        <p>The following example
+                                        demonstrates how to use
+                                        <code>Bonsai.state</code>, a
+                                        primitive computation for
+                                        introducing internal state to a
+                                        computation. Notice that we get
+                                        access to two result nodes:
+                                        <code>count</code> is the
+                                        state’s current value and
+                                        <code>set_count</code> is a
+                                        function for updating that
+                                        value.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/dynamism_examples.ml,part=counter_button -->
+                                        <div class="sourceCode"
+                                        id="cb3"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> (counter_button : Vdom.Node.t Computation.t) =</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub count, set_count = Bonsai.state (<span class="kw">module</span> Int) ~default_model:<span class="dv">0</span> <span class="kw">in</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr count = count</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> set_count = set_count <span class="kw">in</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">(* view-construction logic *)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    [ Vdom.Node.text [%<span class="dt">string</span> <span class="st">&quot;Counter value: %{count#Int}&quot;</span>]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    ; Vdom.Node.button</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        ~attr:(Vdom.Attr.on_click (<span class="kw">fun</span> _ -&gt; set_count (count + <span class="dv">1</span>)))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        [ Vdom.Node.text <span class="st">&quot;increment count&quot;</span> ]</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#counter_button">
+                                        </iframe>
+                                        <p>Now we can illustrate the
+                                        power of being able to
+                                        instantiate a component twice.
+                                        The following code demonstrates
+                                        that we can use
+                                        <code>let%sub</code> on
+                                        <code>counter_button</code> to
+                                        get three independent
+                                        counters.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/dynamism_examples.ml,part=three_counters -->
+                                        <div class="sourceCode"
+                                        id="cb4"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> (three_counters : Vdom.Node.t Computation.t) =</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub counter1 = counter_button <span class="kw">in</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub counter2 = counter_button <span class="kw">in</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub counter3 = counter_button <span class="kw">in</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr counter1 = counter1</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> counter2 = counter2</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> counter3 = counter3 <span class="kw">in</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.div [ counter1; counter2; counter3 ]</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#three_counters">
+                                        </iframe>
+                                        <p>Every time we instantiate
+                                        <code>counter_button</code> with
+                                        <code>let%sub</code>, we get a
+                                        <code>Vdom.Node.t Value.t</code>
+                                        that represents the final result
+                                        node of a copy of the
+                                        <code>counter_button</code>
+                                        computation graph. We use
+                                        <code>Vdom.Node.div</code> to
+                                        build a user interface that
+                                        contains all three buttons so
+                                        the user can click on them;
+                                        however, first we need to use
+                                        <code>let%arr</code> to get
+                                        access to the view inside each
+                                        counter graph node.</p>
+                                        <p>The role of
+                                        <code>let%sub</code> in Bonsai
+                                        is similar to the
+                                        <code>new</code> keyword in an
+                                        object-oriented programming
+                                        language. Just like
+                                        <code>new</code> makes a brand
+                                        new copy of the specified class
+                                        with its own independent mutable
+                                        fields, so also does
+                                        <code>let%sub</code> make a
+                                        brand new copy of the specified
+                                        computation with its own
+                                        independent internal state. In
+                                        addition, just like
+                                        <code>new</code> usually yields
+                                        a reference/pointer (in
+                                        languages like C# or Java)
+                                        instead of the data itself, so
+                                        also does <code>let%sub</code>
+                                        yield merely the result node of
+                                        the newly copied graph instead
+                                        of the graph itself.</p>
+                                        <p>We’ve introduced two basic
+                                        kinds of computations - state,
+                                        which may be introduced by
+                                        <code>Bonsai.state</code>, and
+                                        work, which may be introduced by
+                                        <code>let%arr</code>. While
+                                        these are certainly the most
+                                        important, Bonsai provides
+                                        primitive computations for a few
+                                        other things, such as
+                                        time-varying and edge-triggering
+                                        computations.</p>
+                                        <p>We’ve also introduced the
+                                        primary means by which you
+                                        construct larger computations
+                                        from smaller ones -
+                                        <code>let%sub</code>. Part of
+                                        the learning curve of building
+                                        Bonsai apps is getting
+                                        comfortable composing together a
+                                        bunch of little
+                                        computations.</p>
+                                        <h1
+                                        id="the-scary-side-of-values">The
+                                        scary side of values</h1>
+                                        <p>The previous section
+                                        intentionally did not explain
+                                        that <code>Value.t</code> is an
+                                        applicative, which means that it
+                                        works with the
+                                        <code>let%map</code> syntax, in
+                                        addition to the
+                                        <code>let%arr</code> syntax
+                                        we’ve already introduced. The
+                                        difference between the two is
+                                        very small: <code>let%arr</code>
+                                        expands to the expansion of
+                                        <code>let%map</code>, except it
+                                        wraps the entire thing in a call
+                                        to <code>return</code>. The
+                                        following</p>
+                                        <p><code>let f (x : int Value.t) : int Computation.t =   let%arr x = x in   x + 1</code></p>
+                                        <p>expands to</p>
+                                        <p><code>let f (x : int Value.t) : int Computation.t =   (let%arr x = x in      x + 1)</code></p>
+                                        <p>which further expands to</p>
+                                        <p><code>let f (x : int Value.t) : int Computation.t =   return (Value.map x ~f:(fun x -&gt; x + 1))</code></p>
+                                        <p>The <code>Value.t</code>
+                                        applicative interface is scary
+                                        because re-using the result of a
+                                        <code>let%map</code> expression
+                                        causes the work that it
+                                        represents to be duplicated.
+                                        Consider the following
+                                        computation.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/dynamism_examples.ml,part=problem_with_map_part_1 -->
+                                        <div class="sourceCode"
+                                        id="cb5"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> component (xs : <span class="dt">int</span> <span class="dt">list</span> Value.t) : <span class="dt">string</span> Computation.t =</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sum =</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%map xs = xs <span class="kw">in</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">List</span>.fold xs ~init:<span class="dv">0</span> ~f:( + )</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> average =</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%map sum = sum</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">and</span> xs = xs <span class="kw">in</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> length = <span class="dt">List</span>.length xs <span class="kw">in</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> length = <span class="dv">0</span> <span class="kw">then</span> <span class="dv">0</span> <span class="kw">else</span> sum / length</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr sum = sum</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> average = average <span class="kw">in</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  [%<span class="dt">string</span> <span class="st">&quot;sum = %{sum#Int}, average = %{average#Int}&quot;</span>]</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>We would like this
+                                        computation to only do the work
+                                        of computing <code>sum</code>
+                                        once; however, every usage of
+                                        <code>sum</code> entails an
+                                        iteration through the list. Note
+                                        that the final result depends on
+                                        <code>sum</code> directly, but
+                                        also indirectly through
+                                        <code>average</code>; this means
+                                        that <code>sum</code> is
+                                        computed twice in order to
+                                        produce the formatted
+                                        string.</p>
+                                        <p>This explanation seems to
+                                        contradict the explanation in
+                                        the beginning of this chapter
+                                        that computations are graphs and
+                                        values are nodes in the graph.
+                                        The truth is that values are
+                                        also graphs, and re-using a
+                                        value entails using another copy
+                                        of that value’s graph, thus
+                                        duplicating any work contained
+                                        in the graph. To avoid this work
+                                        duplication, we can instantiate
+                                        the value with
+                                        <code>let%sub</code>, but since
+                                        <code>let%sub</code> only
+                                        instantiates computations, we
+                                        must wrap the
+                                        <code>let%map</code> inside a
+                                        call to <code>return</code>. For
+                                        consistency and robustness,
+                                        we’ll apply this transformation
+                                        to <code>average</code> as well,
+                                        even though it is only used
+                                        once.</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/dynamism_examples.ml,part=problem_with_map_part_2 -->
+                                        <div class="sourceCode"
+                                        id="cb6"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> component (xs : <span class="dt">int</span> <span class="dt">list</span> Value.t) : <span class="dt">string</span> Computation.t =</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub sum =</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    return</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      (<span class="kw">let</span>%map xs = xs <span class="kw">in</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>       <span class="dt">List</span>.fold xs ~init:<span class="dv">0</span> ~f:( + ))</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub average =</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    return</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>      (<span class="kw">let</span>%map sum = sum</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>       <span class="kw">and</span> xs = xs <span class="kw">in</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>       <span class="kw">let</span> length = <span class="dt">List</span>.length xs <span class="kw">in</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>       <span class="kw">if</span> length = <span class="dv">0</span> <span class="kw">then</span> <span class="dv">0</span> <span class="kw">else</span> sum / length)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  return</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">let</span>%map sum = sum</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>     <span class="kw">and</span> average = average <span class="kw">in</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>     [%<span class="dt">string</span> <span class="st">&quot;sum = %{sum#Int}, average = %{average#Int}&quot;</span>])</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>Before the introduction of
+                                        <code>let%arr</code>, this was
+                                        the idiomatic way of using
+                                        Bonsai. However, now that
+                                        <code>let%arr</code> exists, we
+                                        can transform the above code
+                                        into the following, exactly
+                                        equivalent, computation:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/dynamism_examples.ml,part=problem_with_map_part_3 -->
+                                        <div class="sourceCode"
+                                        id="cb7"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> component (xs : <span class="dt">int</span> <span class="dt">list</span> Value.t) : <span class="dt">string</span> Computation.t =</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub sum =</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%arr xs = xs <span class="kw">in</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">List</span>.fold xs ~init:<span class="dv">0</span> ~f:( + )</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%sub average =</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span>%arr sum = sum</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">and</span> xs = xs <span class="kw">in</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> length = <span class="dt">List</span>.length xs <span class="kw">in</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> length = <span class="dv">0</span> <span class="kw">then</span> <span class="dv">0</span> <span class="kw">else</span> sum / length</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr sum = sum</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">and</span> average = average <span class="kw">in</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  [%<span class="dt">string</span> <span class="st">&quot;sum = %{sum#Int}, average = %{average#Int}&quot;</span>]</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <p>While the
+                                        <code>Value.t</code> applicative
+                                        can have surprising behavior, if
+                                        you restrict yourself to only
+                                        use <code>let%sub</code> and
+                                        <code>let%arr</code>, then you
+                                        won’t ever accidentally
+                                        duplicate work.</p>
+                                        <h1
+                                        id="inputs-to-the-graph">Inputs
+                                        to the graph</h1>
+                                        <p>Dynamic data flows into the
+                                        graph through
+                                        <code>'a Var.t</code>, the third
+                                        main type in Bonsai. A var is
+                                        similar to a <code>ref</code> or
+                                        the analogous
+                                        <code>'a Incr.Var.t</code> from
+                                        incremental.</p>
+                                        <!-- $MDX file=../../src/var.mli,part=var_module_signature -->
+                                        <div class="sourceCode"
+                                        id="cb8"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> &#39;a t</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">(** Creates a var with an initial value. *)</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> create : &#39;a -&gt; &#39;a t</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">(** Runs a function over the current value and updates it to the result. *)</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> update : &#39;a t -&gt; f:(&#39;a -&gt; &#39;a) -&gt; <span class="dt">unit</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">(** Change the current value. *)</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> set : &#39;a t -&gt; &#39;a -&gt; <span class="dt">unit</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">(** Retrieve the current value. *)</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> get : &#39;a t -&gt; &#39;a</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">(** Get a value that tracks the current value, for use in a computation. *)</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> value : &#39;a t -&gt; &#39;a Value.t</span></code></pre></div>
+                                        <p>The typical use-case for a
+                                        var is that there is some source
+                                        of ever-changing data, such as a
+                                        <code>Polling_state_rpc</code>
+                                        from a server. The Bonsai app
+                                        will subscribe to these changes
+                                        with a callback that updates the
+                                        var with the new data that it
+                                        received. The main app
+                                        computation then receives the
+                                        value-ified var after it has
+                                        been passed through
+                                        <code>Var.value</code>. Here is
+                                        a concrete example:</p>
+                                        <!-- $MDX file=../../examples/bonsai_guide_code/dynamism_examples.ml,part=counter_var -->
+                                        <div class="sourceCode"
+                                        id="cb9"><pre
+                                        class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> counter_every_second : <span class="dt">int</span> Value.t =</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> counter_var : <span class="dt">int</span> Bonsai.Var.t = Bonsai.Var.create (<span class="dv">-1</span>) <span class="kw">in</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  every (Time_ns.Span.of_sec <span class="fl">1.0</span>) (<span class="kw">fun</span> () -&gt;</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    Bonsai.Var.update counter_var ~f:(<span class="kw">fun</span> i -&gt; i + <span class="dv">1</span>));</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  Bonsai.Var.value counter_var</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>;;</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> view_for_counter : Vdom.Node.t Computation.t =</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span>%arr counter = counter_every_second <span class="kw">in</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  Vdom.Node.textf <span class="st">&quot;counter: %d&quot;</span> counter</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div>
+                                        <iframe data-external="1" src="./out#counter">
+                                        </iframe>
+                                        <h1
+                                        id="bonsai-is-a-compiler">Bonsai
+                                        is a compiler</h1>
+                                        <p>The <code>Bonsai</code>
+                                        library does not provide the
+                                        logic for stabilizing an
+                                        incremental function and
+                                        extracting the output value.
+                                        Instead, it compiles the value
+                                        and computation “surface syntax”
+                                        into the “assembly language”
+                                        provided by the
+                                        <code>Incremental</code>
+                                        library. Compilation happens
+                                        once when the app starts up, and
+                                        thereafter the main program only
+                                        interacts with the app in
+                                        <code>Incr.t</code> form.</p>
+                                        <p>The Bonsai API is carefully
+                                        designed to allow its compiler
+                                        to statically analyze the entire
+                                        graph. This is why we <a
+                                        href="../blogs/why_no_bind.html">don’t
+                                        provide bind</a>, since the
+                                        callback passed to
+                                        <code>bind</code> is an opaque
+                                        function. There are few
+                                        important consequences of the
+                                        static analyzability of Bonsai
+                                        graphs:</p>
+                                        <ul>
+                                        <li>Compilation to incremental
+                                        nodes only needs to happen once,
+                                        at startup.</li>
+                                        <li>We can run “whole-program
+                                        analysis” on the graph to
+                                        optimize and seriously condense
+                                        the computation graph.</li>
+                                        <li>We have the ability to
+                                        instrument each node in a
+                                        computation with performance and
+                                        debugging info. Eventually we
+                                        plan to use this info to
+                                        implement a debugger and
+                                        profiler for Bonsai
+                                        computations.</li>
+                                        </ul>
+                                    </div>
+            </div>
+        </div>
+        <!-- <script src="https://vjs.zencdn.net/5.4.4/video.js"></script> -->
+
+    </body>
+</html>
