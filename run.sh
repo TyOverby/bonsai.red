@@ -32,6 +32,11 @@ mkdir -p publish/out
 dune build --release ./bonsai_guide_code/main.bc.js
 
 cp _build/default/bonsai_guide_code/main.bc.js ./publish/out/main.bc.js
+
 cp ./bonsai_guide_code/index.html ./publish/out/index.html
+echo "<style>" >> ./publish/out/index.html
+cat example.css >> ./publish/out/index.html
+echo "</style>" >> ./publish/out/index.html
+
 cp ./bonsai_guide_code/style.css ./publish/out/style.css
 cp index.html ./publish/index.html
