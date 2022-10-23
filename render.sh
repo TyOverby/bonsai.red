@@ -60,7 +60,7 @@ cat ./temp/index.html - > ./publish/index.html <<EOF
 <p>
 Bonsai is an OCaml library for building and running pure, incremental,
 state-machines. It is primarily used as a foundational library for web
-applications, where immutable (virutal) representations of view are composed
+applications, where immutable (virtual) representations of view are composed
 together with basic primitives.  
 </p>
 
