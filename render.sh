@@ -74,8 +74,7 @@ view-computation level, Bonsai can incrementalize any subcomputation.
 The "component" abstraction provided by Bonsai enables not only incrementalization 
 of inputs and outputs, but also a powerful encapsulation of component-local state.
 Component-local state is private by default, but because components produce values 
-of arbitrary types (not just views!), exposing component state to other components 
-is trivial.
+of arbitrary types (not just views!), exposing state to other components is trivial.
 </p>
 
 <p>
