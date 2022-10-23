@@ -46,5 +46,6 @@ do
     echo "$f $b"
 done
 
+echo '<link rel="stylesheet" type="text/css" href="/style.css" />' >> all.html
 mv all.html ./publish/index.html
 cp style.css ./publish/style.css
