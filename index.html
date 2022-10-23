@@ -16,21 +16,24 @@
 <link rel="stylesheet" type="text/css" href="/style.css" />
     </div>
 <p>
-Bonsai is an OCaml library for building an running pure, incremental,
+Bonsai is an OCaml library for building and running pure, incremental,
 state-machines. It is primarily used as a foundational library for web
 applications, where immutable (virutal) representations of view are composed
 together with basic primitives.  
 </p>
 
 <p>
-Incrementality is useful for reducing unnecessarily recomputing parts of the
-application, but compared to other frameworks that have incrementality at the
+Incrementality is used to reduce unnecessarily recomputing parts of the
+application, and compared to other frameworks that have incrementality at the
 view-computation level, Bonsai can incrementalize any subcomputation.  
 </p>
 
 <p>
 The "component" abstraction provided by Bonsai enables not only incrementalization 
 of inputs and outputs, but also a powerful encapsulation of component-local state.
+Component-local state is private by default, but because components produce values 
+of arbitrary types (not just views!), exposing component state to other components 
+is trivial.
 </p>
 
 <p>
