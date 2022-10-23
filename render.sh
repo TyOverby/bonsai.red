@@ -36,7 +36,6 @@ do
     b="$(basename -s '.md' $f)"
     title="$(echo "$b" | sed 's:-: :g' | sed -E 's:^[0-9]+::g')"
     echo "$b"
-    #sed 's|https://bonsai:8535|https://bonsai.red/out|' -i temp/*.md
     pandoc "$f" \
         --highlight-style=nord.theme \
         --template=template.html \
@@ -47,5 +46,44 @@ do
 done
 
 echo '<link rel="stylesheet" type="text/css" href="/style.css" />' >> all.html
-mv all.html ./publish/index.html
+
+cat - all.html > ./temp/index.html <<EOF
+    <div class="doc-title">
+        <span id="bonsai">bonsai</span> 
+    </div>
+    <div class="toc_and_chapters">
+EOF
+
+
+cat ./temp/index.html - > ./publish/index.html <<EOF
+    </div>
+<p>
+Bonsai is an OCaml library for building an running pure, incremental,
+state-machines. It is primarily used as a foundational library for web
+applications, where immutable (virutal) representations of view are composed
+together with basic primitives.  
+</p>
+
+<p>
+Incrementality is useful for reducing unnecessarily recomputing parts of the
+application, but compared to other frameworks that have incrementality at the
+view-computation level, Bonsai can incrementalize any subcomputation.  
+</p>
+
+<p>
+The "component" abstraction provided by Bonsai enables not only incrementalization 
+of inputs and outputs, but also a powerful encapsulation of component-local state.
+</p>
+
+<p>
+This website contains the Bonsai Guide, but make sure to 
+<a href="https://github.com/janestreet/bonsai">check out the project on github too!</a>
+</p>
+
+<style>
+p:nth-of-type(1) {
+  margin-top:0;
+}
+</style>
+EOF
 cp style.css ./publish/style.css
