@@ -1,3 +1,7 @@
+    <div class="doc-title">
+        <span id="bonsai">bonsai</span> 
+    </div>
+    <div class="toc_and_chapters">
 <ul>
 <li><a href="./00-introduction.html">  introduction </a></li>
 <li><a href="./01-virtual_dom.html">  virtual_dom </a></li>
@@ -10,3 +14,32 @@
 <li><a href="./09-edge-triggering.html">  edge triggering </a></li>
 </ul>
 <link rel="stylesheet" type="text/css" href="/style.css" />
+    </div>
+<p>
+Bonsai is an OCaml library for building an running pure, incremental,
+state-machines. It is primarily used as a foundational library for web
+applications, where immutable (virutal) representations of view are composed
+together with basic primitives.  
+</p>
+
+<p>
+Incrementality is useful for reducing unnecessarily recomputing parts of the
+application, but compared to other frameworks that have incrementality at the
+view-computation level, Bonsai can incrementalize any subcomputation.  
+</p>
+
+<p>
+The "component" abstraction provided by Bonsai enables not only incrementalization 
+of inputs and outputs, but also a powerful encapsulation of component-local state.
+</p>
+
+<p>
+This website contains the Bonsai Guide, but make sure to 
+<a href="https://github.com/janestreet/bonsai">check out the project on github too!</a>
+</p>
+
+<style>
+p:nth-of-type(1) {
+  margin-top:0;
+}
+</style>
