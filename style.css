@@ -125,8 +125,7 @@ a {
 }
 
 iframe {
-  background: #fffef4;
-  background: #ECEFF4;
+  background: #13171c;
   width: 100%;
 
   border-radius: 0 0 3px 3px;
@@ -152,7 +151,7 @@ aside::before {
   position: absolute;
   top: 3px;
   left: 3px;
-  font-size: 0.3em;
+  font-size: calc(max(0.3em,10px));
   font-weight: 600;
   color: #81a1c1;
 }
