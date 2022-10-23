@@ -61,6 +61,8 @@
   background: #1a1d23;
   color: #ECEFF4;
   font-weight:300;
+
+  font-size: calc(min(16px, 3vw));
 }
 
 ol, ul {
@@ -72,14 +74,18 @@ h1, h2, h3, h4 {
 }
 
 body {
-  min-width: 720px;
-  max-width: 720px;
+  width: 720px;
+  max-width: 100vw;
   margin:auto;
   padding: 2em 0 2em 0;
 }
 
 ul, div.sourceCode, aside {
   clear: both;
+}
+
+pre > code.sourceCode > span {
+  display: unset;
 }
 
 p, li {
