@@ -20,8 +20,6 @@
   color: #DA0031;
 }
 
-
-
 #slash {
   color: #DA0031;
   opacity: 0.4;
@@ -85,7 +83,7 @@ ul, div.sourceCode, aside {
 }
 
 pre > code.sourceCode > span {
-  display: unset;
+  display: unset !important;
 }
 
 p, li {
