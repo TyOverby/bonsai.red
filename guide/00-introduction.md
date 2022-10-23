@@ -1,7 +1,7 @@
 # 00 - Introduction
 
 This guide will teach you how to build user interfaces in the browser
-using several of libraries, primarily `Bonsai` and `Virtual_dom`.
+using several libraries, primarily `Bonsai` and `Virtual_dom`.
 Together, these libraries will allow you to build applications in a pure
 functional style without needing to be exposed to the impure, stateful
 API that browsers provide.
