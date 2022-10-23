@@ -1,5 +1,9 @@
 :root {
-  background: #ECEFF4;
+  background: #13171c;
   color-scheme: dark;
   color: #ECEFF4;
+}
+
+button {
+  margin: 0.5em;
 }
