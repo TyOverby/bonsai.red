@@ -20,6 +20,11 @@
   color: #DA0031;
 }
 
+#bonsai > a {
+  color: inherit;
+  text-decoration: none;
+}
+
 #slash {
   color: #DA0031;
   opacity: 0.4;

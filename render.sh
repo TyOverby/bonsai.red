@@ -9,41 +9,70 @@ mkdir -p temp
 
 echo "<ul>" > all.html
 
-echo "replacing.."
-for f in ./guide/*.md
+echo "sanitizing mdx..."
+for f in ./blogs/*.mdx
 do
-    d="$(dirname $f)"
+    echo "$f"
     b="$(basename $f)"
-    a="$(basename -s '.md' $f)"
-    title="$(echo "$a" | sed 's:-: :g' | sed -E 's:^[0-9]+::g')"
-    echo "$b"
-    cat "$f" \
-        | sed -E 's|https://bonsai:8535|./out|' \
-        | sed -E 's|`ocaml skip|`|' \
-        | sed -E 's|# [0-9]+.*||' \
-        | sed -E 's/\(([^"]*).md\)/(\1.html)/g' \
-        > "./temp/$b"
+    a="$(basename -s '.mdx' $f)"
+    mv "./blogs/$a.mdx" "./blogs/$a.md"
+done 
 
-    printf '<li><a href="./%s.html"> %s </a></li>\n' "$a" "$title" >> "all.html"
-
+echo "replacing.."
+for folder in guide blogs
+do
+    mkdir -p "temp/$folder"
+    for f in ./$folder/*.md
+    do
+        d="$(dirname $f)"
+        b="$(basename $f)"
+        a="$(basename -s '.md' $f)"
+        title="$(echo "$a" | sed 's:-: :g' | sed -E 's:^[0-9]+::g')"
+        echo "$b"
+        output="./temp/$folder/$b"
+        echo "$output"
+        cat "$f" \
+            | sed -E 's|https://bonsai:8535|./out|' \
+            | sed -E 's|`ocaml skip|`|' \
+            | sed -E 's|# [0-9]+.*||' \
+            | sed -E 's/\(([^"]*).md\)/(\1.html)/g' \
+            > "$output"
+    
+        printf '<li><a href="/%s.html"> %s </a></li>\n' "$folder/$a" "$title" >> "all.html"
+    done
 done
 
 echo "</ul>" >> all.html
 
 echo "rendering"
-for f in ./temp/*.md
+for folder in guide blogs
 do
-    b="$(basename -s '.md' $f)"
-    title="$(echo "$b" | sed 's:-: :g' | sed -E 's:^[0-9]+::g')"
-    echo "$b"
-    pandoc "$f" \
-        --highlight-style=nord.theme \
-        --template=template.html \
-        --toc \
-        --metadata title="$title" \
-        -o "./publish/$b.html"
-    echo "$f $b"
+    mkdir -p "publish/$folder"
+    for f in ./temp/$folder/*.md
+    do
+        d="$(dirname $f)"
+        d="$(echo "$d" | sed 's:\./::')" # removes ./ prefix.
+        b="$(basename -s '.md' $f)"
+        title="$(echo "$b" | sed 's:-: :g' | sed -E 's:^[0-9]+::g')"
+        echo "$b"
+        echo "About to run pandon on $f!"
+        pandoc "$f" \
+            --highlight-style=nord.theme \
+            --template=template.html \
+            --toc \
+            --metadata title="$title" \
+            -o "./publish/$folder/$b.html"
+        echo "$f $b"
+    done
 done
+
+mkdir -p publish/blogs/letsub
+for image in ./blogs/letsub/*.jpg
+do
+    b="$(basename $image)"
+    cp "./blogs/letsub/$b" "./publish/blogs/letsub/$b"
+done
+
 
 echo '<link rel="stylesheet" type="text/css" href="/style.css" />' >> all.html
 
