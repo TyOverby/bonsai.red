@@ -5,10 +5,10 @@ set -euo pipefail
 if [ ! -d _opam ]; then 
   opam switch create ./ ocaml-base-compiler.4.12.1
   eval $(opam env) 
-  opam repo add "janestreet-bleeding" "https://github.com/janestreet/opam-repository.git#e0f594b09711e5daf55ce097bb8d653e7ec87ea2"
+  opam repo add "janestreet-bleeding" "https://github.com/janestreet/opam-repository.git"
   eval $(opam env) 
   opam update
-  opam install -y dune bonsai
+  opam install -y dune bonsai ppx_css
 else 
   echo "skipping opam switch and install"
 fi
