@@ -14,8 +14,8 @@ applications.
 # Web Apps at 10,000 Feet
 
 The browser understands three languages: Javascript, HTML, CSS. Jane
-Street programmers only understand one language: OCaml. Thus, we've made
-it possible to write all three of the browser languages using OCaml.
+Street programmers primarly use OCaml, so we've made
+it possible to write all three of the browser languages using it.
 
 -   `js_of_ocaml` is an OCaml-to-Javascript compiler.
 -   `virtual_dom` is a library for building values that represent a
