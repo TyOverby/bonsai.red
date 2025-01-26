@@ -186,4 +186,4 @@ let on_submit (contents : string) : unit Vdom.Effect.t =
 ```{=html}
 </iframe>
 ```
-Next, read the [chapter on testing](../blogs/testing.md).
+Next, read the [chapter on flow](07.flow.md).
